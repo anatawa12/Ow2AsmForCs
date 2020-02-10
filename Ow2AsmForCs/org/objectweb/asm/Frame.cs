@@ -3,9 +3,9 @@ using java.lang;
 
 namespace org.objectweb.asm {
 internal class Frame {
-internal const int DIM = 0xF0000000;
+internal const int DIM = unchecked((int)0xF0000000);
 internal const int ARRAY_OF = 0x10000000;
-internal const int ELEMENT_OF = 0xF0000000;
+internal const int ELEMENT_OF = unchecked((int)0xF0000000);
 internal const int KIND = 0xF000000;
 internal const int TOP_IF_LONG_OR_DOUBLE = 0x800000;
 internal const int VALUE = 0x7FFFFF;
