@@ -129,7 +129,7 @@ owner.outputStackMax = top;
 }
 }
 private void push(ClassWriter cw, String desc) {
-int type = type(cw, desc);
+int type = Frame.type(cw, desc);
 if (type != 0) {
 push(type);
 if (type == LONG || type == DOUBLE) {
@@ -192,6 +192,7 @@ break;
 default:
 t = desc.substring(dims + 1, desc.length() - 1);
 data = OBJECT | cw.addType(t);
+break;
 }
 return (dims - index) << 28 | data;
 }
@@ -362,6 +363,7 @@ push(OBJECT | cw.addType("java/lang/invoke/MethodType"));
 break;
 default:
 push(OBJECT | cw.addType("java/lang/invoke/MethodHandle"));
+break;
 }
 break;
 case Opcodes.ALOAD:

@@ -75,6 +75,7 @@ result.append(getStepArgument(i)).append(';');
 break;
 default:
 result.append('_');
+break;
 }
 }
 return result.toString();

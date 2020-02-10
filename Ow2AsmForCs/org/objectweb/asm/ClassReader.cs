@@ -1373,7 +1373,9 @@ av.visit(name, dv);
 break;
 default:
 v = readAnnotationValues(v - 3, buf, false, av.visitArray(name));
+break;
 }
+break;
 }
 return v;
 }
@@ -1538,6 +1540,7 @@ break;
 default:
 frame[index] = readLabel(readUnsignedShort(v), labels);
 v += 2;
+break;
 }
 return v;
 }

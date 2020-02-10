@@ -71,6 +71,7 @@ return;
 }
 default:
 hashCode = 0x7FFFFFFF & (type + strVal1.hashCode() * strVal2.hashCode() * strVal3.hashCode());
+break;
 }
 }
 internal void set(String name, String desc, int bsmIndex) {

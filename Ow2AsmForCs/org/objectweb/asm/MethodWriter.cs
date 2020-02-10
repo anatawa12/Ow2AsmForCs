@@ -1142,7 +1142,7 @@ endFrame();
 }
 private int startFrame(int offset, int nLocal, int nStack) {
 int n = 3 + nLocal + nStack;
-if (frame == null || frame.length < n) {
+if (frame == null || frame.Length < n) {
 frame = new int[n];
 }
 frame[0] = offset;
@@ -1240,6 +1240,7 @@ stackMap.putByte(FULL_FRAME).putShort(delta).putShort(clocalsSize);
 writeFrameTypes(3, 3 + clocalsSize);
 stackMap.putShort(cstackSize);
 writeFrameTypes(3 + clocalsSize, 3 + clocalsSize + cstackSize);
+break;
 }
 }
 private void writeFrameTypes(int start, int end) {
@@ -1257,6 +1258,7 @@ stackMap.putByte(8).putShort(cw.typeTable[v].intVal);
 break;
 default:
 stackMap.putByte(v);
+break;
 }
 }
 else {
@@ -1295,6 +1297,7 @@ sb.append('S');
 break;
 default:
 sb.append('J');
+break;
 }
 }
 stackMap.putByte(7).putShort(cw.newClass(sb.toString()));
