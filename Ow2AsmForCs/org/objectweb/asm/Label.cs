@@ -156,6 +156,7 @@ continue;
 }
 l.addToSubroutine(id, nbSubroutines);
 }
+{
 Edge e = l.successors;
 while (e != null){
 if ((l.status & Label.JSR) == 0 || e != l.successors.next) {
@@ -165,6 +166,7 @@ stack = e.successor;
 }
 }
 e = e.next;
+}
 }
 }
 }

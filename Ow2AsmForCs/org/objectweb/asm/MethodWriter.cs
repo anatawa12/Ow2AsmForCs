@@ -899,6 +899,7 @@ changed = n;
 e = e.next;
 }
 }
+{
 Label l = labels;
 while (l != null){
 f = l.frame;
@@ -930,6 +931,7 @@ handlerCount += 1;
 handler = handler.next;
 }
 this.maxStack = max;
+}
 }
 else if (compute == MAXS) {
 Handler handler = firstHandler;

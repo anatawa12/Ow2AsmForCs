@@ -749,9 +749,11 @@ j = k;
 items = newItems;
 threshold = (int)(nl * 0.75);
 }
+{
 int index = i.hashCode % items.Length;
 i.next = items[index];
 items[index] = i;
+}
 }
 private void put122(int b, int s1, int s2) {
 pool.put12(b, s1).putShort(s2);
