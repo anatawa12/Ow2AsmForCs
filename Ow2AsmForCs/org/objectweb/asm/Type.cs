@@ -49,46 +49,6 @@ return getType(methodDescriptor.toCharArray(), 0);
 public static Type getMethodType(Type returnType, params Type[] argumentTypes) {
 return getType(getMethodDescriptor(returnType, argumentTypes));
 }
-public static Type getType(Class</* ? (only) */ object> c) {
-if (c.isPrimitive()) {
-if (c == Integer.TYPE) {
-return INT_TYPE;
-}
-else if (c == Void.TYPE) {
-return VOID_TYPE;
-}
-else if (c == Boolean.TYPE) {
-return BOOLEAN_TYPE;
-}
-else if (c == Byte.TYPE) {
-return BYTE_TYPE;
-}
-else if (c == Character.TYPE) {
-return CHAR_TYPE;
-}
-else if (c == Short.TYPE) {
-return SHORT_TYPE;
-}
-else if (c == Double.TYPE) {
-return DOUBLE_TYPE;
-}
-else if (c == Float.TYPE) {
-return FLOAT_TYPE;
-}
-else {
-return LONG_TYPE;
-}
-}
-else {
-return getType(getDescriptor(c));
-}
-}
-public static Type getType(Constructor</* ? (only) */ object> c) {
-return getType(getConstructorDescriptor(c));
-}
-public static Type getType(Method m) {
-return getType(getMethodDescriptor(m));
-}
 public static Type[] getArgumentTypes(String methodDescriptor) {
 char[] buf = methodDescriptor.toCharArray();
 int off = 1;
@@ -117,14 +77,6 @@ size += 1;
 }
 return args;
 }
-public static Type[] getArgumentTypes(Method method) {
-Class</* ? (only) */ object>[] classes = method.getParameterTypes();
-Type[] types = new Type[classes.length];
-for (int i = classes.length - 1; i >= 0; --i) {
-types[i] = getType(classes[i]);
-}
-return types;
-}
 public static Type getReturnType(String methodDescriptor) {
 char[] buf = methodDescriptor.toCharArray();
 int off = 1;
@@ -138,9 +90,6 @@ while (buf[off++] != ';'){
 }
 }
 }
-}
-public static Type getReturnType(Method method) {
-return getType(method.getReturnType());
 }
 public static int getArgumentsAndReturnSizes(String desc) {
 int n = 1;
@@ -298,86 +247,6 @@ buf.append(';');
 }
 else {
 buf.append(this.buf, off, len);
-}
-}
-public static String getInternalName(Class</* ? (only) */ object> c) {
-return c.getName().replace('.', '/');
-}
-public static String getDescriptor(Class</* ? (only) */ object> c) {
-StringBuilder buf = new StringBuilder();
-getDescriptor(buf, c);
-return buf.toString();
-}
-public static String getConstructorDescriptor(Constructor</* ? (only) */ object> c) {
-Class</* ? (only) */ object>[] parameters = c.getParameterTypes();
-StringBuilder buf = new StringBuilder();
-buf.append('(');
-for (int i = 0; i < parameters.length; ++i) {
-getDescriptor(buf, parameters[i]);
-}
-return buf.append(")V").toString();
-}
-public static String getMethodDescriptor(Method m) {
-Class</* ? (only) */ object>[] parameters = m.getParameterTypes();
-StringBuilder buf = new StringBuilder();
-buf.append('(');
-for (int i = 0; i < parameters.length; ++i) {
-getDescriptor(buf, parameters[i]);
-}
-buf.append(')');
-getDescriptor(buf, m.getReturnType());
-return buf.toString();
-}
-private static void getDescriptor(StringBuilder buf, Class</* ? (only) */ object> c) {
-Class</* ? (only) */ object> d = c;
-while (true){
-if (d.isPrimitive()) {
-char car;
-if (d == Integer.TYPE) {
-car = 'I';
-}
-else if (d == Void.TYPE) {
-car = 'V';
-}
-else if (d == Boolean.TYPE) {
-car = 'Z';
-}
-else if (d == Byte.TYPE) {
-car = 'B';
-}
-else if (d == Character.TYPE) {
-car = 'C';
-}
-else if (d == Short.TYPE) {
-car = 'S';
-}
-else if (d == Double.TYPE) {
-car = 'D';
-}
-else if (d == Float.TYPE) {
-car = 'F';
-}
-else {
-car = 'J';
-}
-buf.append(car);
-return;
-}
-else if (d.isArray()) {
-buf.append('[');
-d = d.getComponentType();
-}
-else {
-buf.append('L');
-String name = d.getName();
-int len = name.length();
-for (int i = 0; i < len; ++i) {
-char car = name.charAt(i);
-buf.append(car == '.' ? '/' : car);
-}
-buf.append(';');
-return;
-}
 }
 }
 public virtual int getSize() {
