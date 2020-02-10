@@ -745,7 +745,7 @@ if (!ClassReader.ANNOTATIONS) {
 return null;
 }
 ByteVector bv = new ByteVector();
-typeRef = (typeRef & 0xFF0000FF) | (lastCodeOffset << 8);
+typeRef = (typeRef & unchecked((int)0xFF0000FF)) | (lastCodeOffset << 8);
 AnnotationWriter.putTarget(typeRef, typePath, bv);
 bv.putShort(cw.newUTF8(desc)).putShort(0);
 AnnotationWriter aw = new AnnotationWriter(cw, true, bv, bv, bv.length - 2);

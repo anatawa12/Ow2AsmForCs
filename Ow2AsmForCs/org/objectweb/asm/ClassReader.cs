@@ -1154,19 +1154,19 @@ switch (target /*>>>*/ >> 24) {
 case 0x00:
 case 0x01:
 case 0x16:
-target &= 0xFFFF0000;
+target &= unchecked((int)0xFFFF0000);
 u += 2;
 break;
 case 0x13:
 case 0x14:
 case 0x15:
-target &= 0xFF000000;
+target &= unchecked((int)0xFF000000);
 u += 1;
 break;
 case 0x40:
 case 0x41:
 {
-target &= 0xFF000000;
+target &= unchecked((int)0xFF000000);
 int n = readUnsignedShort(u + 1);
 context.start = new Label[n];
 context.end = new Label[n];
@@ -1187,11 +1187,11 @@ case 0x48:
 case 0x49:
 case 0x4A:
 case 0x4B:
-target &= 0xFF0000FF;
+target &= unchecked((int)0xFF0000FF);
 u += 4;
 break;
 default:
-target &= (target /*>>>*/ >> 24) < 0x43 ? 0xFFFFFF00 : 0xFF000000;
+target &= unchecked((target /*>>>*/ >> 24) < 0x43 ? (int)0xFFFFFF00 : (int)0xFF000000);
 u += 3;
 break;
 }
@@ -1619,7 +1619,7 @@ byte[] b = this.b;
 int strLen = 0;
 int c;
 int st = 0;
-char cc = 0;
+char cc = (char)0;
 while (index < endIndex){
 c = b[index++];
 switch (st) {
