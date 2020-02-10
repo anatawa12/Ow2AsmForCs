@@ -170,7 +170,7 @@ e = e.next;
 }
 }
 }
-public virtual String ToString() {
+public override String ToString() {
 return "L" + SystemJ.identityHashCode(this);
 }
 }

@@ -260,7 +260,7 @@ else {
 return opcode + (buf == null ? (off & 0xFF0000) >> 16 : 4);
 }
 }
-public virtual bool Equals(Object o) {
+public override bool Equals(Object o) {
 if (this == o) {
 return true;
 }
@@ -283,7 +283,7 @@ return false;
 }
 return true;
 }
-public virtual int GetHashCode() {
+public override int GetHashCode() {
 int hc = 13 * sort;
 if (sort >= ARRAY) {
 for (int i = off, end = i + len; i < end; i++) {
@@ -292,7 +292,7 @@ hc = 17 * (hc + buf[i]);
 }
 return hc;
 }
-public virtual String ToString() {
+public override String ToString() {
 return getDescriptor();
 }
 }

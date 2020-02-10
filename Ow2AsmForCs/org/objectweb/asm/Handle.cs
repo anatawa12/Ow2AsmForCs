@@ -34,7 +34,7 @@ return desc;
 public bool isInterface() {
 return itf;
 }
-public bool Equals(Object obj) {
+public override bool Equals(Object obj) {
 if (obj == this) {
 return true;
 }
@@ -44,10 +44,10 @@ return false;
 Handle h = (Handle)obj;
 return tag == h.tag && itf == h.itf && owner.equals(h.owner) && name.equals(h.name) && desc.equals(h.desc);
 }
-public int GetHashCode() {
+public override int GetHashCode() {
 return tag + (itf ? 64 : 0) + owner.hashCode() * name.hashCode() * desc.hashCode();
 }
-public String ToString() {
+public override String ToString() {
 return owner + '.' + name + desc + " (" + tag + (itf ? " itf" : "") + ')';
 }
 }

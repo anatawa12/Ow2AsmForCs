@@ -56,7 +56,7 @@ i += 1;
 @out.data[0] = (byte)(@out.length / 2);
 return new TypePath(@out.data, 0);
 }
-public virtual String ToString() {
+public override String ToString() {
 int length = getLength();
 StringBuilder result = new StringBuilder(length * 2);
 for (int i = 0; i < length; ++i) {

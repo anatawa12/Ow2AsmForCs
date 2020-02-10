@@ -111,7 +111,7 @@ classReader.copyPool(this);
 this.cr = classReader;
 }
 
-public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
+public override void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
 this.version = version;
 this.access = access;
 this.name = newClass(name);
@@ -128,7 +128,7 @@ this.interfaces[i] = newClass(interfaces[i]);
 }
 }
 }
-public void visitSource(String file, String debug) {
+public override void visitSource(String file, String debug) {
 if (file != null) {
 sourceFile = newUTF8(file);
 }
@@ -136,13 +136,13 @@ if (debug != null) {
 sourceDebug = new ByteVector().encodeUTF8(debug, 0, int.MaxValue);
 }
 }
-public void visitOuterClass(String owner, String name, String desc) {
+public override void visitOuterClass(String owner, String name, String desc) {
 enclosingMethodOwner = newClass(owner);
 if (name != null && desc != null) {
 enclosingMethod = newNameType(name, desc);
 }
 }
-public AnnotationVisitor visitAnnotation(String desc, bool visible) {
+public override AnnotationVisitor visitAnnotation(String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -159,7 +159,7 @@ ianns = aw;
 }
 return aw;
 }
-public AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
+public override AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -177,11 +177,11 @@ itanns = aw;
 }
 return aw;
 }
-public void visitAttribute(Attribute attr) {
+public override void visitAttribute(Attribute attr) {
 attr.next = attrs;
 attrs = attr;
 }
-public void visitInnerClass(String name, String outerName, String innerName, int access) {
+public override void visitInnerClass(String name, String outerName, String innerName, int access) {
 if (innerClasses == null) {
 innerClasses = new ByteVector();
 }
@@ -197,13 +197,13 @@ nameItem.intVal = innerClassesCount;
 else {
 }
 }
-public FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
+public override FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
 return new FieldWriter(this, access, name, desc, signature, value);
 }
-public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+public override MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
 return new MethodWriter(this, access, name, desc, signature, exceptions, compute);
 }
-public void visitEnd() {
+public override void visitEnd() {
 }
 public virtual byte[] toByteArray() {
 if (index > 0xFFFF) {

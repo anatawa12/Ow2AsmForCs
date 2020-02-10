@@ -34,7 +34,7 @@ this.value = cw.newConstItem(value).index;
 }
 }
 
-public AnnotationVisitor visitAnnotation(String desc, bool visible) {
+public override AnnotationVisitor visitAnnotation(String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -51,7 +51,7 @@ ianns = aw;
 }
 return aw;
 }
-public AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
+public override AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -69,11 +69,11 @@ itanns = aw;
 }
 return aw;
 }
-public void visitAttribute(Attribute attr) {
+public override void visitAttribute(Attribute attr) {
 attr.next = attrs;
 attrs = attr;
 }
-public void visitEnd() {
+public override void visitEnd() {
 }
 internal int getSize() {
 int size = 8;

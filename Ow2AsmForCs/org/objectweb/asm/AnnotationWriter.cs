@@ -19,7 +19,7 @@ this.parent = parent;
 this.offset = offset;
 }
 
-public void visit(String name, Object value) {
+public override void visit(String name, Object value) {
 ++size;
 if (named) {
 bv.putShort(cw.newUTF8(name));
@@ -104,14 +104,14 @@ Item i = cw.newConstItem(value);
 bv.put12(".s.IFJDCS".charAt(i.type), i.index);
 }
 }
-public void visitEnum(String name, String desc, String value) {
+public override void visitEnum(String name, String desc, String value) {
 ++size;
 if (named) {
 bv.putShort(cw.newUTF8(name));
 }
 bv.put12('e', cw.newUTF8(desc)).putShort(cw.newUTF8(value));
 }
-public AnnotationVisitor visitAnnotation(String name, String desc) {
+public override AnnotationVisitor visitAnnotation(String name, String desc) {
 ++size;
 if (named) {
 bv.putShort(cw.newUTF8(name));
@@ -119,7 +119,7 @@ bv.putShort(cw.newUTF8(name));
 bv.put12('@', cw.newUTF8(desc)).putShort(0);
 return new AnnotationWriter(cw, true, bv, bv, bv.length - 2);
 }
-public AnnotationVisitor visitArray(String name) {
+public override AnnotationVisitor visitArray(String name) {
 ++size;
 if (named) {
 bv.putShort(cw.newUTF8(name));
@@ -127,7 +127,7 @@ bv.putShort(cw.newUTF8(name));
 bv.put12('[', 0);
 return new AnnotationWriter(cw, false, bv, bv, bv.length - 2);
 }
-public void visitEnd() {
+public override void visitEnd() {
 if (parent != null) {
 byte[] data = parent.data;
 data[offset] = (byte)(size /*>>>*/ >> 8);

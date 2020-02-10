@@ -106,21 +106,21 @@ visitLabel(labels);
 }
 }
 
-public virtual void visitParameter(String name, int access) {
+public override void visitParameter(String name, int access) {
 if (methodParameters == null) {
 methodParameters = new ByteVector();
 }
 ++methodParametersCount;
 methodParameters.putShort((name == null) ? 0 : cw.newUTF8(name)).putShort(access);
 }
-public virtual AnnotationVisitor visitAnnotationDefault() {
+public override AnnotationVisitor visitAnnotationDefault() {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
 annd = new ByteVector();
 return new AnnotationWriter(cw, false, annd, null, 0);
 }
-public virtual AnnotationVisitor visitAnnotation(String desc, bool visible) {
+public override AnnotationVisitor visitAnnotation(String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -137,7 +137,7 @@ ianns = aw;
 }
 return aw;
 }
-public virtual AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
+public override AnnotationVisitor visitTypeAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -155,7 +155,7 @@ itanns = aw;
 }
 return aw;
 }
-public virtual AnnotationVisitor visitParameterAnnotation(int parameter, String desc, bool visible) {
+public override AnnotationVisitor visitParameterAnnotation(int parameter, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -182,7 +182,7 @@ ipanns[parameter] = aw;
 }
 return aw;
 }
-public virtual void visitAttribute(Attribute attr) {
+public override void visitAttribute(Attribute attr) {
 if (attr.isCodeAttribute()) {
 attr.next = cattrs;
 cattrs = attr;
@@ -192,9 +192,9 @@ attr.next = attrs;
 attrs = attr;
 }
 }
-public virtual void visitCode() {
+public override void visitCode() {
 }
-public virtual void visitFrame(int type, int nLocal, Object[] local, int nStack, Object[] stack) {
+public override void visitFrame(int type, int nLocal, Object[] local, int nStack, Object[] stack) {
 if (!ClassReader.FRAMES || compute == FRAMES) {
 return;
 }
@@ -308,7 +308,7 @@ previousFrameOffset = code.length;
 maxStack = Math.Max(maxStack, nStack);
 maxLocals = Math.Max(maxLocals, currentLocals);
 }
-public virtual void visitInsn(int opcode) {
+public override void visitInsn(int opcode) {
 lastCodeOffset = code.length;
 code.putByte(opcode);
 if (currentBlock != null) {
@@ -327,7 +327,7 @@ noSuccessor();
 }
 }
 }
-public virtual void visitIntInsn(int opcode, int operand) {
+public override void visitIntInsn(int opcode, int operand) {
 lastCodeOffset = code.length;
 if (currentBlock != null) {
 if (compute == FRAMES || compute == INSERTED_FRAMES) {
@@ -348,7 +348,7 @@ else {
 code.put11(opcode, operand);
 }
 }
-public virtual void visitVarInsn(int opcode, int var) {
+public override void visitVarInsn(int opcode, int var) {
 lastCodeOffset = code.length;
 if (currentBlock != null) {
 if (compute == FRAMES || compute == INSERTED_FRAMES) {
@@ -401,7 +401,7 @@ if (opcode >= Opcodes.ISTORE && compute == FRAMES && handlerCount > 0) {
 visitLabel(new Label());
 }
 }
-public virtual void visitTypeInsn(int opcode, String type) {
+public override void visitTypeInsn(int opcode, String type) {
 lastCodeOffset = code.length;
 Item i = cw.newClassItem(type);
 if (currentBlock != null) {
@@ -418,7 +418,7 @@ stackSize = size;
 }
 code.put12(opcode, i.index);
 }
-public virtual void visitFieldInsn(int opcode, String owner, String name, String desc) {
+public override void visitFieldInsn(int opcode, String owner, String name, String desc) {
 lastCodeOffset = code.length;
 Item i = cw.newFieldItem(owner, name, desc);
 if (currentBlock != null) {
@@ -450,7 +450,7 @@ stackSize = size;
 }
 code.put12(opcode, i.index);
 }
-public virtual void visitMethodInsn(int opcode, String owner, String name, String desc, bool itf) {
+public override void visitMethodInsn(int opcode, String owner, String name, String desc, bool itf) {
 lastCodeOffset = code.length;
 Item i = cw.newMethodItem(owner, name, desc, itf);
 int argSize = i.intVal;
@@ -487,7 +487,7 @@ else {
 code.put12(opcode, i.index);
 }
 }
-public virtual void visitInvokeDynamicInsn(String name, String desc, Handle bsm, params Object[] bsmArgs) {
+public override void visitInvokeDynamicInsn(String name, String desc, Handle bsm, params Object[] bsmArgs) {
 lastCodeOffset = code.length;
 Item i = cw.newInvokeDynamicItem(name, desc, bsm, bsmArgs);
 int argSize = i.intVal;
@@ -510,7 +510,7 @@ stackSize = size;
 code.put12(Opcodes.INVOKEDYNAMIC, i.index);
 code.putShort(0);
 }
-public virtual void visitJumpInsn(int opcode, Label label) {
+public override void visitJumpInsn(int opcode, Label label) {
 bool isWide = opcode >= 200;
 opcode = isWide ? opcode - 33 : opcode;
 lastCodeOffset = code.length;
@@ -577,7 +577,7 @@ noSuccessor();
 }
 }
 }
-public virtual void visitLabel(Label label) {
+public override void visitLabel(Label label) {
 cw.hasAsmInsns |= label.resolve(this, code.length, code.data);
 if ((label.status & Label.DEBUG) != 0) {
 return;
@@ -629,7 +629,7 @@ previousBlock.successor = label;
 previousBlock = label;
 }
 }
-public virtual void visitLdcInsn(Object cst) {
+public override void visitLdcInsn(Object cst) {
 lastCodeOffset = code.length;
 Item i = cw.newConstItem(cst);
 if (currentBlock != null) {
@@ -661,7 +661,7 @@ else {
 code.put11(Opcodes.LDC, index);
 }
 }
-public virtual void visitIincInsn(int var, int increment) {
+public override void visitIincInsn(int var, int increment) {
 lastCodeOffset = code.length;
 if (currentBlock != null) {
 if (compute == FRAMES || compute == INSERTED_FRAMES) {
@@ -681,7 +681,7 @@ else {
 code.putByte(Opcodes.IINC).put11(var, increment);
 }
 }
-public virtual void visitTableSwitchInsn(int min, int max, Label dflt, params Label[] labels) {
+public override void visitTableSwitchInsn(int min, int max, Label dflt, params Label[] labels) {
 lastCodeOffset = code.length;
 int source = code.length;
 code.putByte(Opcodes.TABLESWITCH);
@@ -693,7 +693,7 @@ labels[i].put(this, code, source, true);
 }
 visitSwitchInsn(dflt, labels);
 }
-public virtual void visitLookupSwitchInsn(Label dflt, int[] keys, Label[] labels) {
+public override void visitLookupSwitchInsn(Label dflt, int[] keys, Label[] labels) {
 lastCodeOffset = code.length;
 int source = code.length;
 code.putByte(Opcodes.LOOKUPSWITCH);
@@ -727,7 +727,7 @@ addSuccessor(stackSize, labels[i]);
 noSuccessor();
 }
 }
-public virtual void visitMultiANewArrayInsn(String desc, int dims) {
+public override void visitMultiANewArrayInsn(String desc, int dims) {
 lastCodeOffset = code.length;
 Item i = cw.newClassItem(desc);
 if (currentBlock != null) {
@@ -740,7 +740,7 @@ stackSize += 1 - dims;
 }
 code.put12(Opcodes.MULTIANEWARRAY, i.index).putByte(dims);
 }
-public virtual AnnotationVisitor visitInsnAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
+public override AnnotationVisitor visitInsnAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -759,7 +759,7 @@ ictanns = aw;
 }
 return aw;
 }
-public virtual void visitTryCatchBlock(Label start, Label end, Label handler, String type) {
+public override void visitTryCatchBlock(Label start, Label end, Label handler, String type) {
 ++handlerCount;
 Handler h = new Handler();
 h.start = start;
@@ -775,7 +775,7 @@ lastHandler.next = h;
 }
 lastHandler = h;
 }
-public virtual AnnotationVisitor visitTryCatchAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
+public override AnnotationVisitor visitTryCatchAnnotation(int typeRef, TypePath typePath, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -793,7 +793,7 @@ ictanns = aw;
 }
 return aw;
 }
-public virtual void visitLocalVariable(String name, String desc, String signature, Label start, Label end, int index) {
+public override void visitLocalVariable(String name, String desc, String signature, Label start, Label end, int index) {
 if (signature != null) {
 if (localVarType == null) {
 localVarType = new ByteVector();
@@ -814,7 +814,7 @@ maxLocals = n;
 }
 }
 }
-public virtual AnnotationVisitor visitLocalVariableAnnotation(int typeRef, TypePath typePath, Label[] start, Label[] end, int[] index, String desc, bool visible) {
+public override AnnotationVisitor visitLocalVariableAnnotation(int typeRef, TypePath typePath, Label[] start, Label[] end, int[] index, String desc, bool visible) {
 if (!ClassReader.ANNOTATIONS) {
 return null;
 }
@@ -842,7 +842,7 @@ ictanns = aw;
 }
 return aw;
 }
-public virtual void visitLineNumber(int line, Label start) {
+public override void visitLineNumber(int line, Label start) {
 if (lineNumber == null) {
 lineNumber = new ByteVector();
 }
@@ -850,7 +850,7 @@ lineNumber = new ByteVector();
 lineNumber.putShort(start.position);
 lineNumber.putShort(line);
 }
-public virtual void visitMaxs(int maxStack, int maxLocals) {
+public override void visitMaxs(int maxStack, int maxLocals) {
 if (ClassReader.FRAMES && compute == FRAMES) {
 Handler handler = firstHandler;
 while (handler != null){
@@ -1015,7 +1015,7 @@ this.maxStack = maxStack;
 this.maxLocals = maxLocals;
 }
 }
-public virtual void visitEnd() {
+public override void visitEnd() {
 }
 private void addSuccessor(int info, Label successor) {
 Edge b = new Edge();
