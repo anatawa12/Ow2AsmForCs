@@ -56,13 +56,15 @@ public const int F_APPEND = 1;
 public const int F_CHOP = 2;
 public const int F_SAME = 3;
 public const int F_SAME1 = 4;
-public const int TOP = 0;
-public const int INTEGER = 1;
-public const int FLOAT = 2;
-public const int DOUBLE = 3;
-public const int LONG = 4;
-public const int NULL = 5;
-public const int UNINITIALIZED_THIS = 6;
+
+public static readonly FrameType TOP = new FrameType(0);
+public static readonly FrameType INTEGER = new FrameType(1);
+public static readonly FrameType FLOAT = new FrameType(2);
+public static readonly FrameType DOUBLE = new FrameType(3);
+public static readonly FrameType LONG = new FrameType(4);
+public static readonly FrameType NULL = new FrameType(5);
+public static readonly FrameType UNINITIALIZED_THIS = new FrameType(6);
+
 public const int NOP = 0;
 public const int ACONST_NULL = 1;
 public const int ICONST_M1 = 2;
