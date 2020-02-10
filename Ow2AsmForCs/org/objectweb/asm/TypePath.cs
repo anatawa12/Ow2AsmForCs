@@ -3,10 +3,10 @@ using java.lang;
 
 namespace org.objectweb.asm {
 public class TypePath {
-public readonly static int ARRAY_ELEMENT = 0;
-public readonly static int INNER_TYPE = 1;
-public readonly static int WILDCARD_BOUND = 2;
-public readonly static int TYPE_ARGUMENT = 3;
+public const int ARRAY_ELEMENT = 0;
+public const int INNER_TYPE = 1;
+public const int WILDCARD_BOUND = 2;
+public const int TYPE_ARGUMENT = 3;
 internal byte[] b;
 internal int offset;
 internal TypePath(byte[] b, int offset) {

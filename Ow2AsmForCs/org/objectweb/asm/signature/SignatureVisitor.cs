@@ -4,9 +4,9 @@ using org.objectweb.asm;
 
 namespace org.objectweb.asm.signature {
 public abstract class SignatureVisitor {
-public readonly static char EXTENDS = '+';
-public readonly static char SUPER = '-';
-public readonly static char INSTANCEOF = '=';
+public const char EXTENDS = '+';
+public const char SUPER = '-';
+public const char INSTANCEOF = '=';
 protected readonly int api;
 public SignatureVisitor(int api) {
 if (api != Opcodes.ASM4 && api != Opcodes.ASM5) {
