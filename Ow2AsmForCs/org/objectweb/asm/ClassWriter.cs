@@ -133,7 +133,7 @@ if (file != null) {
 sourceFile = newUTF8(file);
 }
 if (debug != null) {
-sourceDebug = new ByteVector().encodeUTF8(debug, 0, Integer.MAX_VALUE);
+sourceDebug = new ByteVector().encodeUTF8(debug, 0, int.MaxValue);
 }
 }
 public void visitOuterClass(String owner, String name, String desc) {

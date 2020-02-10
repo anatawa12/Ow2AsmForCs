@@ -224,8 +224,8 @@ for (int i = 0; i < nLocal; ++i) {
 if (local[i] is String) {
 frame[frameIndex++] = Frame.OBJECT | cw.addType((String)local[i]);
 }
-else if (local[i] is Integer) {
-frame[frameIndex++] = ((Integer)local[i]).intValue();
+else if (local[i] is int) {
+frame[frameIndex++] = (int)local[i];
 }
 else {
 frame[frameIndex++] = Frame.UNINITIALIZED | cw.addUninitializedType("", ((Label)local[i]).position);
@@ -235,8 +235,8 @@ for (int i = 0; i < nStack; ++i) {
 if (stack[i] is String) {
 frame[frameIndex++] = Frame.OBJECT | cw.addType((String)stack[i]);
 }
-else if (stack[i] is Integer) {
-frame[frameIndex++] = ((Integer)stack[i]).intValue();
+else if (stack[i] is int) {
+frame[frameIndex++] = (int)stack[i];
 }
 else {
 frame[frameIndex++] = Frame.UNINITIALIZED | cw.addUninitializedType("", ((Label)stack[i]).position);
@@ -1305,8 +1305,8 @@ private void writeFrameType(Object type) {
 if (type is String) {
 stackMap.putByte(7).putShort(cw.newClass((String)type));
 }
-else if (type is Integer) {
-stackMap.putByte(((Integer)type).intValue());
+else if (type is int) {
+stackMap.putByte((int)type);
 }
 else {
 stackMap.putByte(8).putShort(((Label)type).position);

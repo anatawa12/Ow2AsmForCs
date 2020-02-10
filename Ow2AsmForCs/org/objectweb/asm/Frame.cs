@@ -64,8 +64,8 @@ initializationCount = 0;
 private static int convert(ClassWriter cw, int nInput, Object[] input, int[] output) {
 int i = 0;
 for (int j = 0; j < nInput; ++j) {
-if (input[j] is Integer) {
-output[i++] = BASE | ((Integer)input[j]).intValue();
+if (input[j] is int) {
+output[i++] = BASE | (int)input[j];
 if (input[j] == Opcodes.LONG || input[j] == Opcodes.DOUBLE) {
 output[i++] = TOP;
 }

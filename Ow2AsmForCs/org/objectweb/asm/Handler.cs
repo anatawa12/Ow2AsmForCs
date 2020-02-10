@@ -19,7 +19,7 @@ h.next = remove(h.next, start, end);
 int hstart = h.start.position;
 int hend = h.end.position;
 int s = start.position;
-int e = end == null ? Integer.MAX_VALUE : end.position;
+int e = end == null ? int.MaxValue : end.position;
 if (s < hend && e > hstart) {
 if (s <= hstart) {
 if (e >= hend) {
