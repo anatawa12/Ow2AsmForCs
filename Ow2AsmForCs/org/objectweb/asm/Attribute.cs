@@ -6,7 +6,7 @@ public class Attribute {
 public readonly String type;
 internal byte[] value;
 internal Attribute next;
-protected Attribute(String type) {
+protected internal Attribute(String type) {
 this.type = type;
 }
 
@@ -19,7 +19,7 @@ return false;
 protected virtual Label[] getLabels() {
 return null;
 }
-protected virtual Attribute read(ClassReader cr, int off, int len, char[] buf, int codeOff, Label[] labels) {
+protected internal virtual Attribute read(ClassReader cr, int off, int len, char[] buf, int codeOff, Label[] labels) {
 Attribute attr = new Attribute(type);
 attr.value = new byte[len];
 SystemJ.arraycopy(cr.b, off, attr.value, 0, len);

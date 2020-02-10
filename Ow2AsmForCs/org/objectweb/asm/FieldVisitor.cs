@@ -4,7 +4,7 @@ using java.lang;
 namespace org.objectweb.asm {
 public abstract class FieldVisitor {
 protected readonly int api;
-protected FieldVisitor fv;
+protected internal FieldVisitor fv;
 public FieldVisitor(int api): this(api, null) {
 }
 

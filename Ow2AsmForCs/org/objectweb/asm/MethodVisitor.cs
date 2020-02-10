@@ -4,7 +4,7 @@ using java.lang;
 namespace org.objectweb.asm {
 public abstract class MethodVisitor {
 protected readonly int api;
-protected MethodVisitor mv;
+protected internal MethodVisitor mv;
 public MethodVisitor(int api): this(api, null) {
 }
 
