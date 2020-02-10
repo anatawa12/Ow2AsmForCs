@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2507f66d-1df4-4cf0-8654-67e96fb34593" name="Default Changelist" comment="" />
+    <list default="true" id="2507f66d-1df4-4cf0-8654-67e96fb34593" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/TypePath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/TypePath.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/TypeReference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/TypeReference.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/signature/SignatureVisitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Ow2AsmForCs/org/objectweb/asm/signature/SignatureVisitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +62,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1XTLr8sP3ADI3brKCcEP0EhJsgk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -102,7 +111,8 @@
       <updated>1581065333325</updated>
       <workItem from="1581065335146" duration="1968000" />
       <workItem from="1581151069819" duration="53653000" />
-      <workItem from="1581295456564" duration="1833000" />
+      <workItem from="1581295456564" duration="2199000" />
+      <workItem from="1581306640572" duration="150000" />
     </task>
     <servers />
   </component>
@@ -170,10 +180,10 @@
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
     <state x="541" y="485" width="901" height="590" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.3200.1777@0.23.3200.1777" timestamp="1581229421392" />
-    <state x="656" y="353" width="670" height="676" key="search.everywhere.popup" timestamp="1581246232180">
+    <state x="656" y="353" width="670" height="676" key="search.everywhere.popup" timestamp="1581306656621">
       <screen x="0" y="23" width="3200" height="1777" />
     </state>
-    <state x="656" y="353" width="670" height="676" key="search.everywhere.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1581246232180" />
+    <state x="656" y="353" width="670" height="676" key="search.everywhere.popup/0.23.3200.1777@0.23.3200.1777" timestamp="1581306656621" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
