@@ -1,5 +1,3 @@
-using NotImplementedException = System.NotImplementedException;
-
 namespace java.lang
 {
     public class StringBuilder
