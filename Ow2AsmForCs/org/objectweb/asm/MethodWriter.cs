@@ -3,19 +3,19 @@ using java.lang;
 
 namespace org.objectweb.asm {
 internal class MethodWriter: MethodVisitor {
-static readonly internal int ACC_CONSTRUCTOR = 0x80000;
-static readonly internal int SAME_FRAME = 0;
-static readonly internal int SAME_LOCALS_1_STACK_ITEM_FRAME = 64;
-static readonly internal int RESERVED = 128;
-static readonly internal int SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED = 247;
-static readonly internal int CHOP_FRAME = 248;
-static readonly internal int SAME_FRAME_EXTENDED = 251;
-static readonly internal int APPEND_FRAME = 252;
-static readonly internal int FULL_FRAME = 255;
-static readonly internal int FRAMES = 0;
-static readonly internal int INSERTED_FRAMES = 1;
-static readonly internal int MAXS = 2;
-static readonly internal int NOTHING = 3;
+internal const int ACC_CONSTRUCTOR = 0x80000;
+internal const int SAME_FRAME = 0;
+internal const int SAME_LOCALS_1_STACK_ITEM_FRAME = 64;
+internal const int RESERVED = 128;
+internal const int SAME_LOCALS_1_STACK_ITEM_FRAME_EXTENDED = 247;
+internal const int CHOP_FRAME = 248;
+internal const int SAME_FRAME_EXTENDED = 251;
+internal const int APPEND_FRAME = 252;
+internal const int FULL_FRAME = 255;
+internal const int FRAMES = 0;
+internal const int INSERTED_FRAMES = 1;
+internal const int MAXS = 2;
+internal const int NOTHING = 3;
 readonly internal ClassWriter cw;
 private int access;
 private readonly int name;

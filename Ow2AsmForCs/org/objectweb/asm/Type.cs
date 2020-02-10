@@ -4,18 +4,18 @@ using java.lang.reflect;
 
 namespace org.objectweb.asm {
 public class Type {
-public static readonly int VOID = 0;
-public static readonly int BOOLEAN = 1;
-public static readonly int CHAR = 2;
-public static readonly int BYTE = 3;
-public static readonly int SHORT = 4;
-public static readonly int INT = 5;
-public static readonly int FLOAT = 6;
-public static readonly int LONG = 7;
-public static readonly int DOUBLE = 8;
-public static readonly int ARRAY = 9;
-public static readonly int OBJECT = 10;
-public static readonly int METHOD = 11;
+public const int VOID = 0;
+public const int BOOLEAN = 1;
+public const int CHAR = 2;
+public const int BYTE = 3;
+public const int SHORT = 4;
+public const int INT = 5;
+public const int FLOAT = 6;
+public const int LONG = 7;
+public const int DOUBLE = 8;
+public const int ARRAY = 9;
+public const int OBJECT = 10;
+public const int METHOD = 11;
 public static readonly Type VOID_TYPE = new Type(VOID, null, ('V' << 24) | (5 << 16) | (0 << 8) | 0, 1);
 public static readonly Type BOOLEAN_TYPE = new Type(BOOLEAN, null, ('Z' << 24) | (0 << 16) | (5 << 8) | 1, 1);
 public static readonly Type CHAR_TYPE = new Type(CHAR, null, ('C' << 24) | (0 << 16) | (6 << 8) | 1, 1);

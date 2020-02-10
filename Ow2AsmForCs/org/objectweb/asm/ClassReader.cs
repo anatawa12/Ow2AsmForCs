@@ -4,16 +4,16 @@ using java.io;
 
 namespace org.objectweb.asm {
 public class ClassReader {
-static readonly internal bool SIGNATURES = true;
-static readonly internal bool ANNOTATIONS = true;
-static readonly internal bool FRAMES = true;
-static readonly internal bool WRITER = true;
-static readonly internal bool RESIZE = true;
-public static readonly int SKIP_CODE = 1;
-public static readonly int SKIP_DEBUG = 2;
-public static readonly int SKIP_FRAMES = 4;
-public static readonly int EXPAND_FRAMES = 8;
-static readonly internal int EXPAND_ASM_INSNS = 256;
+internal const bool SIGNATURES = true;
+internal const bool ANNOTATIONS = true;
+internal const bool FRAMES = true;
+internal const bool WRITER = true;
+internal const bool RESIZE = true;
+public const int SKIP_CODE = 1;
+public const int SKIP_DEBUG = 2;
+public const int SKIP_FRAMES = 4;
+public const int EXPAND_FRAMES = 8;
+internal const int EXPAND_ASM_INSNS = 256;
 public readonly byte[] b;
 private readonly int[] items;
 private readonly String[] strings;

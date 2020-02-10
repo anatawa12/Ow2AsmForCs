@@ -3,18 +3,18 @@ using java.lang;
 
 namespace org.objectweb.asm {
 public class Label {
-static readonly internal int DEBUG = 1;
-static readonly internal int RESOLVED = 2;
-static readonly internal int RESIZED = 4;
-static readonly internal int PUSHED = 8;
-static readonly internal int TARGET = 16;
-static readonly internal int STORE = 32;
-static readonly internal int REACHABLE = 64;
-static readonly internal int JSR = 128;
-static readonly internal int RET = 256;
-static readonly internal int SUBROUTINE = 512;
-static readonly internal int VISITED = 1024;
-static readonly internal int VISITED2 = 2048;
+internal const int DEBUG = 1;
+internal const int RESOLVED = 2;
+internal const int RESIZED = 4;
+internal const int PUSHED = 8;
+internal const int TARGET = 16;
+internal const int STORE = 32;
+internal const int REACHABLE = 64;
+internal const int JSR = 128;
+internal const int RET = 256;
+internal const int SUBROUTINE = 512;
+internal const int VISITED = 1024;
+internal const int VISITED2 = 2048;
 public Object info;
 internal int status;
 internal int line;
