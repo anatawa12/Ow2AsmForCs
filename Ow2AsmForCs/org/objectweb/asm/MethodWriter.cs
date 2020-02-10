@@ -85,8 +85,8 @@ this.descriptor = desc;
 if (ClassReader.SIGNATURES) {
 this.signature = signature;
 }
-if (exceptions != null && exceptions.length > 0) {
-exceptionCount = exceptions.length;
+if (exceptions != null && exceptions.Length > 0) {
+exceptionCount = exceptions.Length;
 this.exceptions = new int[exceptionCount];
 for (int i = 0; i < exceptionCount; ++i) {
 this.exceptions[i] = cw.newClass(exceptions[i]);
@@ -168,14 +168,14 @@ bv.putShort(cw.newUTF8(desc)).putShort(0);
 AnnotationWriter aw = new AnnotationWriter(cw, true, bv, bv, 2);
 if (visible) {
 if (panns == null) {
-panns = new AnnotationWriter[Type.getArgumentTypes(descriptor).length];
+panns = new AnnotationWriter[Type.getArgumentTypes(descriptor).Length];
 }
 aw.next = panns[parameter];
 panns[parameter] = aw;
 }
 else {
 if (ipanns == null) {
-ipanns = new AnnotationWriter[Type.getArgumentTypes(descriptor).length];
+ipanns = new AnnotationWriter[Type.getArgumentTypes(descriptor).Length];
 }
 aw.next = ipanns[parameter];
 ipanns[parameter] = aw;
@@ -688,7 +688,7 @@ code.putByte(Opcodes.TABLESWITCH);
 code.putByteArray(null, 0, (4 - code.length % 4) % 4);
 dflt.put(this, code, source, true);
 code.putInt(min).putInt(max);
-for (int i = 0; i < labels.length; ++i) {
+for (int i = 0; i < labels.Length; ++i) {
 labels[i].put(this, code, source, true);
 }
 visitSwitchInsn(dflt, labels);
@@ -699,8 +699,8 @@ int source = code.length;
 code.putByte(Opcodes.LOOKUPSWITCH);
 code.putByteArray(null, 0, (4 - code.length % 4) % 4);
 dflt.put(this, code, source, true);
-code.putInt(labels.length);
-for (int i = 0; i < labels.length; ++i) {
+code.putInt(labels.Length);
+for (int i = 0; i < labels.Length; ++i) {
 code.putInt(keys[i]);
 labels[i].put(this, code, source, true);
 }
@@ -712,7 +712,7 @@ if (compute == FRAMES) {
 currentBlock.frame.execute(Opcodes.LOOKUPSWITCH, 0, null, null);
 addSuccessor(Edge.NORMAL, dflt);
 dflt.getFirst().status |= Label.TARGET;
-for (int i = 0; i < labels.length; ++i) {
+for (int i = 0; i < labels.Length; ++i) {
 addSuccessor(Edge.NORMAL, labels[i]);
 labels[i].getFirst().status |= Label.TARGET;
 }
@@ -720,7 +720,7 @@ labels[i].getFirst().status |= Label.TARGET;
 else {
 --stackSize;
 addSuccessor(stackSize, dflt);
-for (int i = 0; i < labels.length; ++i) {
+for (int i = 0; i < labels.Length; ++i) {
 addSuccessor(stackSize, labels[i]);
 }
 }
@@ -819,8 +819,8 @@ if (!ClassReader.ANNOTATIONS) {
 return null;
 }
 ByteVector bv = new ByteVector();
-bv.putByte(typeRef /*>>>*/ >> 24).putShort(start.length);
-for (int i = 0; i < start.length; ++i) {
+bv.putByte(typeRef /*>>>*/ >> 24).putShort(start.Length);
+for (int i = 0; i < start.Length; ++i) {
 bv.putShort(start[i].position).putShort(end[i].position - start[i].position).putShort(index[i]);
 }
 if (typePath == null) {
@@ -884,7 +884,7 @@ if ((l.status & Label.TARGET) != 0) {
 l.status |= Label.STORE;
 }
 l.status |= Label.REACHABLE;
-int blockMax = f.inputStack.length + l.outputStackMax;
+int blockMax = f.inputStack.Length + l.outputStackMax;
 if (blockMax > max) {
 max = blockMax;
 }
@@ -1045,7 +1045,7 @@ int nLocal = 0;
 int nStack = 0;
 int[] locals = f.inputLocals;
 int[] stacks = f.inputStack;
-for (i = 0; i < locals.length; ++i) {
+for (i = 0; i < locals.Length; ++i) {
 t = locals[i];
 if (t == Frame.TOP) {
 ++nTop;
@@ -1058,7 +1058,7 @@ if (t == Frame.LONG || t == Frame.DOUBLE) {
 ++i;
 }
 }
-for (i = 0; i < stacks.length; ++i) {
+for (i = 0; i < stacks.Length; ++i) {
 t = stacks[i];
 ++nStack;
 if (t == Frame.LONG || t == Frame.DOUBLE) {
@@ -1073,7 +1073,7 @@ if (t == Frame.LONG || t == Frame.DOUBLE) {
 ++i;
 }
 }
-for (i = 0; i < stacks.length; ++i) {
+for (i = 0; i < stacks.Length; ++i) {
 t = stacks[i];
 frame[frameIndex++] = t;
 if (t == Frame.LONG || t == Frame.DOUBLE) {
@@ -1395,15 +1395,15 @@ size += 8 + itanns.getSize();
 }
 if (ClassReader.ANNOTATIONS && panns != null) {
 cw.newUTF8("RuntimeVisibleParameterAnnotations");
-size += 7 + 2 * (panns.length - synthetics);
-for (int i = panns.length - 1; i >= synthetics; --i) {
+size += 7 + 2 * (panns.Length - synthetics);
+for (int i = panns.Length - 1; i >= synthetics; --i) {
 size += panns[i] == null ? 0 : panns[i].getSize();
 }
 }
 if (ClassReader.ANNOTATIONS && ipanns != null) {
 cw.newUTF8("RuntimeInvisibleParameterAnnotations");
-size += 7 + 2 * (ipanns.length - synthetics);
-for (int i = ipanns.length - 1; i >= synthetics; --i) {
+size += 7 + 2 * (ipanns.Length - synthetics);
+for (int i = ipanns.Length - 1; i >= synthetics; --i) {
 size += ipanns[i] == null ? 0 : ipanns[i].getSize();
 }
 }

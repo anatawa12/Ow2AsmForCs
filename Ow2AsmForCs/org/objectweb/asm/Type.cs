@@ -41,7 +41,7 @@ return getType(typeDescriptor.toCharArray(), 0);
 }
 public static Type getObjectType(String internalName) {
 char[] buf = internalName.toCharArray();
-return new Type(buf[0] == '[' ? ARRAY : OBJECT, buf, 0, buf.length);
+return new Type(buf[0] == '[' ? ARRAY : OBJECT, buf, 0, buf.Length);
 }
 public static Type getMethodType(String methodDescriptor) {
 return getType(methodDescriptor.toCharArray(), 0);
@@ -161,7 +161,7 @@ while (buf[off + len] != ';'){
 }
 return new Type(OBJECT, buf, off + 1, len - 1);
 default:
-return new Type(METHOD, buf, off, buf.length - off);
+return new Type(METHOD, buf, off, buf.Length - off);
 }
 }
 public virtual int getSort() {
@@ -229,7 +229,7 @@ return buf.toString();
 public static String getMethodDescriptor(Type returnType, params Type[] argumentTypes) {
 StringBuilder buf = new StringBuilder();
 buf.append('(');
-for (int i = 0; i < argumentTypes.length; ++i) {
+for (int i = 0; i < argumentTypes.Length; ++i) {
 argumentTypes[i].getDescriptor(buf);
 }
 buf.append(')');

@@ -22,13 +22,13 @@ return null;
 protected virtual Attribute read(ClassReader cr, int off, int len, char[] buf, int codeOff, Label[] labels) {
 Attribute attr = new Attribute(type);
 attr.value = new byte[len];
-System.arraycopy(cr.b, off, attr.value, 0, len);
+SystemJ.arraycopy(cr.b, off, attr.value, 0, len);
 return attr;
 }
 protected virtual ByteVector write(ClassWriter cw, byte[] code, int len, int maxStack, int maxLocals) {
 ByteVector v = new ByteVector();
 v.data = value;
-v.length = value.length;
+v.length = value.Length;
 return v;
 }
 internal int getCount() {

@@ -19,7 +19,7 @@ private readonly int[] items;
 private readonly String[] strings;
 private readonly int maxStringLength;
 public readonly int header;
-public ClassReader(byte[] b): this(b, 0, b.length) {
+public ClassReader(byte[] b): this(b, 0, b.Length) {
 }
 
 public ClassReader(byte[] b, int off, int len) {
@@ -28,7 +28,7 @@ if (readShort(off + 6) > Opcodes.V1_8) {
 throw new IllegalArgumentException();
 }
 items = new int[readUnsignedShort(off + 8)];
-int n = items.length;
+int n = items.Length;
 strings = new String[n];
 int max = 0;
 int index = off + 10;
@@ -93,7 +93,7 @@ return interfaces;
 }
 internal virtual void copyPool(ClassWriter classWriter) {
 char[] buf = new char[maxStringLength];
-int ll = items.length;
+int ll = items.Length;
 Item[] items2 = new Item[ll];
 for (int i = 1; i < ll; i++) {
 int index = items[i];
@@ -152,7 +152,7 @@ default:
 item.set(tag, readUTF8(index, buf), null, null);
 break;
 }
-int index2 = item.hashCode % items2.length;
+int index2 = item.hashCode % items2.Length;
 item.next = items2[index2];
 items2[index2] = item;
 }
@@ -187,7 +187,7 @@ v += 2;
 v += 4;
 Item item = new Item(j);
 item.set(position, hashCode & 0x7FFFFFFF);
-int index = item.hashCode % items.length;
+int index = item.hashCode % items.Length;
 item.next = items[index];
 items[index] = item;
 }
@@ -211,23 +211,23 @@ try {
 byte[] b = new byte[@is.available()];
 int len = 0;
 while (true){
-int n = @is.read(b, len, b.length - len);
+int n = @is.read(b, len, b.Length - len);
 if (n == -1) {
-if (len < b.length) {
+if (len < b.Length) {
 byte[] c = new byte[len];
-System.arraycopy(b, 0, c, 0, len);
+SystemJ.arraycopy(b, 0, c, 0, len);
 b = c;
 }
 return b;
 }
 len += n;
-if (len == b.length) {
+if (len == b.Length) {
 int last = @is.read();
 if (last < 0) {
 return b;
 }
-byte[] c = new byte[b.length + 1000];
-System.arraycopy(b, 0, c, 0, len);
+byte[] c = new byte[b.Length + 1000];
+SystemJ.arraycopy(b, 0, c, 0, len);
 c[len++] = (byte)last;
 b = c;
 }
@@ -254,7 +254,7 @@ String name = readClass(u + 2, c);
 String superClass = readClass(u + 4, c);
 String[] interfaces = new String[readUnsignedShort(u + 6)];
 u += 8;
-for (int i = 0; i < interfaces.length; ++i) {
+for (int i = 0; i < interfaces.Length; ++i) {
 interfaces[i] = readClass(u, c);
 u += 2;
 }
@@ -314,7 +314,7 @@ itanns = u + 8;
 }
 else if ("BootstrapMethods".equals(attrName)) {
 int[] bootstrapMethods = new int[readUnsignedShort(u + 8)];
-for (int j = 0, v = u + 10; j < bootstrapMethods.length; j++) {
+for (int j = 0, v = u + 10; j < bootstrapMethods.Length; j++) {
 bootstrapMethods[j] = v;
 v += 2 + readUnsignedShort(v + 2) << 1;
 }
@@ -371,7 +371,7 @@ classVisitor.visitInnerClass(readClass(v, c), readClass(v + 2, c), readUTF8(v + 
 v += 8;
 }
 }
-u = header + 10 + 2 * interfaces.length;
+u = header + 10 + 2 * interfaces.Length;
 for (int i = readUnsignedShort(u - 2); i > 0; --i) {
 u = readField(classVisitor, context, u);
 }
@@ -496,7 +496,7 @@ code = u + 8;
 else if ("Exceptions".equals(attrName)) {
 exceptions = new String[readUnsignedShort(u + 8)];
 exception = u + 10;
-for (int j = 0; j < exceptions.length; ++j) {
+for (int j = 0; j < exceptions.Length; ++j) {
 exceptions[j] = readClass(exception, c);
 exception += 2;
 }
@@ -555,9 +555,9 @@ bool sameExceptions = false;
 if (exceptions == null) {
 sameExceptions = mw.exceptionCount == 0;
 }
-else if (exceptions.length == mw.exceptionCount) {
+else if (exceptions.Length == mw.exceptionCount) {
 sameExceptions = true;
-for (int j = exceptions.length - 1; j >= 0; --j) {
+for (int j = exceptions.Length - 1; j >= 0; --j) {
 exception -= 2;
 if (mw.exceptions[j] != readUnsignedShort(exception)) {
 sameExceptions = false;
@@ -770,11 +770,11 @@ v += 4;
 }
 else if (ANNOTATIONS && "RuntimeVisibleTypeAnnotations".equals(attrName)) {
 tanns = readTypeAnnotations(mv, context, u + 8, true);
-ntoff = tanns.length == 0 || readByte(tanns[0]) < 0x43 ? -1 : readUnsignedShort(tanns[0] + 1);
+ntoff = tanns.Length == 0 || readByte(tanns[0]) < 0x43 ? -1 : readUnsignedShort(tanns[0] + 1);
 }
 else if (ANNOTATIONS && "RuntimeInvisibleTypeAnnotations".equals(attrName)) {
 itanns = readTypeAnnotations(mv, context, u + 8, false);
-nitoff = itanns.length == 0 || readByte(itanns[0]) < 0x43 ? -1 : readUnsignedShort(itanns[0] + 1);
+nitoff = itanns.Length == 0 || readByte(itanns[0]) < 0x43 ? -1 : readUnsignedShort(itanns[0] + 1);
 }
 else if (FRAMES && "StackMapTable".equals(attrName)) {
 if ((context.flags & SKIP_FRAMES) == 0) {
@@ -792,7 +792,7 @@ frameCount = readUnsignedShort(u + 8);
 }
 }
 else {
-for (int j = 0; j < context.attrs.length; ++j) {
+for (int j = 0; j < context.attrs.Length; ++j) {
 if (context.attrs[j].type.equals(attrName)) {
 Attribute attr = context.attrs[j].read(this, u + 8, readInt(u + 4), c, codeStart - 8, labels);
 if (attr != null) {
@@ -929,7 +929,7 @@ int min = readInt(u + 4);
 int max = readInt(u + 8);
 Label[] table = new Label[max - min + 1];
 u += 12;
-for (int i = 0; i < table.length; ++i) {
+for (int i = 0; i < table.Length; ++i) {
 table[i] = labels[offset + readInt(u)];
 u += 4;
 }
@@ -1027,19 +1027,19 @@ mv.visitMultiANewArrayInsn(readClass(u + 1, c), b[u + 3] & 0xFF);
 u += 4;
 break;
 }
-while (tanns != null && tann < tanns.length && ntoff <= offset){
+while (tanns != null && tann < tanns.Length && ntoff <= offset){
 if (ntoff == offset) {
 int v = readAnnotationTarget(context, tanns[tann]);
 readAnnotationValues(v + 2, c, true, mv.visitInsnAnnotation(context.typeRef, context.typePath, readUTF8(v, c), true));
 }
-ntoff = ++tann >= tanns.length || readByte(tanns[tann]) < 0x43 ? -1 : readUnsignedShort(tanns[tann] + 1);
+ntoff = ++tann >= tanns.Length || readByte(tanns[tann]) < 0x43 ? -1 : readUnsignedShort(tanns[tann] + 1);
 }
-while (itanns != null && itann < itanns.length && nitoff <= offset){
+while (itanns != null && itann < itanns.Length && nitoff <= offset){
 if (nitoff == offset) {
 int v = readAnnotationTarget(context, itanns[itann]);
 readAnnotationValues(v + 2, c, true, mv.visitInsnAnnotation(context.typeRef, context.typePath, readUTF8(v, c), false));
 }
-nitoff = ++itann >= itanns.length || readByte(itanns[itann]) < 0x43 ? -1 : readUnsignedShort(itanns[itann] + 1);
+nitoff = ++itann >= itanns.Length || readByte(itanns[itann]) < 0x43 ? -1 : readUnsignedShort(itanns[itann] + 1);
 }
 }
 if (labels[codeLength] != null) {
@@ -1050,7 +1050,7 @@ int[] typeTable = null;
 if (varTypeTable != 0) {
 u = varTypeTable + 2;
 typeTable = new int[readUnsignedShort(varTypeTable) * 3];
-for (int i = typeTable.length; i > 0; ) {
+for (int i = typeTable.Length; i > 0; ) {
 typeTable[--i] = u + 6;
 typeTable[--i] = readUnsignedShort(u + 8);
 typeTable[--i] = readUnsignedShort(u);
@@ -1064,7 +1064,7 @@ int length = readUnsignedShort(u + 2);
 int index = readUnsignedShort(u + 8);
 String vsignature = null;
 if (typeTable != null) {
-for (int j = 0; j < typeTable.length; j += 3) {
+for (int j = 0; j < typeTable.Length; j += 3) {
 if (typeTable[j] == start && typeTable[j + 1] == index) {
 vsignature = readUTF8(typeTable[j + 2], c);
 break;
@@ -1076,7 +1076,7 @@ u += 10;
 }
 }
 if (tanns != null) {
-for (int i = 0; i < tanns.length; ++i) {
+for (int i = 0; i < tanns.Length; ++i) {
 if ((readByte(tanns[i]) >> 1) == (0x40 >> 1)) {
 int v = readAnnotationTarget(context, tanns[i]);
 v = readAnnotationValues(v + 2, c, true, mv.visitLocalVariableAnnotation(context.typeRef, context.typePath, context.start, context.end, context.index, readUTF8(v, c), true));
@@ -1084,7 +1084,7 @@ v = readAnnotationValues(v + 2, c, true, mv.visitLocalVariableAnnotation(context
 }
 }
 if (itanns != null) {
-for (int i = 0; i < itanns.length; ++i) {
+for (int i = 0; i < itanns.Length; ++i) {
 if ((readByte(itanns[i]) >> 1) == (0x40 >> 1)) {
 int v = readAnnotationTarget(context, itanns[i]);
 v = readAnnotationValues(v + 2, c, true, mv.visitLocalVariableAnnotation(context.typeRef, context.typePath, context.start, context.end, context.index, readUTF8(v, c), false));
@@ -1103,7 +1103,7 @@ private int[] readTypeAnnotations(MethodVisitor mv, Context context, int u, bool
 char[] c = context.buffer;
 int[] offsets = new int[readUnsignedShort(u)];
 u += 2;
-for (int i = 0; i < offsets.length; ++i) {
+for (int i = 0; i < offsets.Length; ++i) {
 offsets[i] = u;
 int target = readInt(u);
 switch (target /*>>>*/ >> 24) {
@@ -1206,7 +1206,7 @@ return u + 1 + 2 * pathLength;
 private void readParameterAnnotations(MethodVisitor mv, Context context, int v, bool visible) {
 int i;
 int n = b[v++] & 0xFF;
-int synthetics = Type.getArgumentTypes(context.desc).length - n;
+int synthetics = Type.getArgumentTypes(context.desc).Length - n;
 AnnotationVisitor av;
 for (i = 0; i < synthetics; ++i) {
 av = mv.visitParameterAnnotation(i, "Ljava/lang/Synthetic;", false);
@@ -1568,7 +1568,7 @@ u += 8;
 return u + 2;
 }
 private Attribute readAttribute(Attribute[] attrs, String type, int off, int len, char[] buf, int codeOff, Label[] labels) {
-for (int i = 0; i < attrs.length; ++i) {
+for (int i = 0; i < attrs.Length; ++i) {
 if (attrs[i].type.equals(type)) {
 return attrs[i].read(this, off, len, buf, codeOff, labels);
 }
@@ -1576,7 +1576,7 @@ return attrs[i].read(this, off, len, buf, codeOff, labels);
 return new Attribute(type).read(this, off, len, null, -1, null);
 }
 public virtual int getItemCount() {
-return items.length;
+return items.Length;
 }
 public virtual int getItem(int item) {
 return items[item];

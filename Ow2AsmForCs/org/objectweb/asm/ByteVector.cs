@@ -15,7 +15,7 @@ data = new byte[initialSize];
 
 public virtual ByteVector putByte(int b) {
 int length = this.length;
-if (length + 1 > data.length) {
+if (length + 1 > data.Length) {
 enlarge(1);
 }
 data[length++] = (byte)b;
@@ -24,7 +24,7 @@ return this;
 }
 internal virtual ByteVector put11(int b1, int b2) {
 int length = this.length;
-if (length + 2 > data.length) {
+if (length + 2 > data.Length) {
 enlarge(2);
 }
 byte[] data = this.data;
@@ -35,7 +35,7 @@ return this;
 }
 public virtual ByteVector putShort(int s) {
 int length = this.length;
-if (length + 2 > data.length) {
+if (length + 2 > data.Length) {
 enlarge(2);
 }
 byte[] data = this.data;
@@ -46,7 +46,7 @@ return this;
 }
 internal virtual ByteVector put12(int b, int s) {
 int length = this.length;
-if (length + 3 > data.length) {
+if (length + 3 > data.Length) {
 enlarge(3);
 }
 byte[] data = this.data;
@@ -58,7 +58,7 @@ return this;
 }
 public virtual ByteVector putInt(int i) {
 int length = this.length;
-if (length + 4 > data.length) {
+if (length + 4 > data.Length) {
 enlarge(4);
 }
 byte[] data = this.data;
@@ -71,7 +71,7 @@ return this;
 }
 public virtual ByteVector putLong(long l) {
 int length = this.length;
-if (length + 8 > data.length) {
+if (length + 8 > data.Length) {
 enlarge(8);
 }
 byte[] data = this.data;
@@ -94,7 +94,7 @@ if (charLength > 65535) {
 throw new IllegalArgumentException();
 }
 int len = length;
-if (len + 2 + charLength > data.length) {
+if (len + 2 + charLength > data.Length) {
 enlarge(2 + charLength);
 }
 byte[] data = this.data;
@@ -137,7 +137,7 @@ if (start >= 0) {
 data[start] = (byte)(byteLength /*>>>*/ >> 8);
 data[start + 1] = (byte)byteLength;
 }
-if (length + byteLength - i > data.length) {
+if (length + byteLength - i > data.Length) {
 enlarge(byteLength - i);
 }
 int len = length;
@@ -160,20 +160,20 @@ length = len;
 return this;
 }
 public virtual ByteVector putByteArray(byte[] b, int off, int len) {
-if (length + len > data.length) {
+if (length + len > data.Length) {
 enlarge(len);
 }
 if (b != null) {
-System.arraycopy(b, off, data, length, len);
+SystemJ.arraycopy(b, off, data, length, len);
 }
 length += len;
 return this;
 }
 private void enlarge(int size) {
-int length1 = 2 * data.length;
+int length1 = 2 * data.Length;
 int length2 = length + size;
 byte[] newData = new byte[length1 > length2 ? length1 : length2];
-System.arraycopy(data, 0, newData, 0, length);
+SystemJ.arraycopy(data, 0, newData, 0, length);
 data = newData;
 }
 }

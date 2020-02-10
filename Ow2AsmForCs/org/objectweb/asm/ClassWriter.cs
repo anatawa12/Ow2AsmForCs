@@ -89,7 +89,7 @@ static ClassWriter(){
 int i;
 byte[] b = new byte[220];
 String s = "AAAAAAAAAAAAAAAABCLMMDDDDDEEEEEEEEEEEEEEEEEEEEAAAAAAAADD" + "DDDEEEEEEEEEEEEEEEEEEEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" + "AAAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAAAAAAJJJJJJJJJJJJJJJJDOPAA" + "AAAAGGGGGGGHIFBFAAFFAARQJJKKSSSSSSSSSSSSSSSSSS";
-for (i = 0; i < b.length; ++i) {
+for (i = 0; i < b.Length; ++i) {
 b[i] = (byte)(s.charAt(i) - 'A');
 }
 TYPE = b;
@@ -98,7 +98,7 @@ public ClassWriter(int flags): base(Opcodes.ASM5) {
 index = 1;
 pool = new ByteVector();
 items = new Item[256];
-threshold = (int)(0.75d * items.length);
+threshold = (int)(0.75d * items.Length);
 key = new Item();
 key2 = new Item();
 key3 = new Item();
@@ -120,8 +120,8 @@ if (ClassReader.SIGNATURES && signature != null) {
 this.signature = newUTF8(signature);
 }
 this.superName = superName == null ? 0 : newClass(superName);
-if (interfaces != null && interfaces.length > 0) {
-interfaceCount = interfaces.length;
+if (interfaces != null && interfaces.Length > 0) {
+interfaceCount = interfaces.Length;
 this.interfaces = new int[interfaceCount];
 for (int i = 0; i < interfaceCount; ++i) {
 this.interfaces[i] = newClass(interfaces[i]);
@@ -508,7 +508,7 @@ bootstrapMethods = this.bootstrapMethods = new ByteVector();
 int position = bootstrapMethods.length;
 int hashCode = bsm.hashCode();
 bootstrapMethods.putShort(newHandle(bsm.tag, bsm.owner, bsm.name, bsm.desc, bsm.isInterface()));
-int argsLength = bsmArgs.length;
+int argsLength = bsmArgs.Length;
 bootstrapMethods.putShort(argsLength);
 for (int i = 0; i < argsLength; i++) {
 Object bsmArg = bsmArgs[i];
@@ -518,7 +518,7 @@ bootstrapMethods.putShort(newConst(bsmArg));
 byte[] data = bootstrapMethods.data;
 int length = (1 + 1 + argsLength) << 1;
 hashCode &= 0x7FFFFFFF;
-Item result = items[hashCode % items.length];
+Item result = items[hashCode % items.Length];
 loop:
 while (result != null){
 if (result.type != BSM || result.hashCode != hashCode) {
@@ -675,9 +675,9 @@ put(result);
 if (typeTable == null) {
 typeTable = new Item[16];
 }
-if (typeCount == typeTable.length) {
-Item[] newTable = new Item[2 * typeTable.length];
-System.arraycopy(typeTable, 0, newTable, 0, typeTable.length);
+if (typeCount == typeTable.Length) {
+Item[] newTable = new Item[2 * typeTable.Length];
+SystemJ.arraycopy(typeTable, 0, newTable, 0, typeTable.Length);
 typeTable = newTable;
 }
 typeTable[typeCount] = result;
@@ -725,7 +725,7 @@ return c.getName().replace('.', '/');
 }
 }
 private Item get(Item key) {
-Item i = items[key.hashCode % items.length];
+Item i = items[key.hashCode % items.Length];
 while (i != null && (i.type != key.type || !key.isEqualTo(i))){
 i = i.next;
 }
@@ -733,13 +733,13 @@ return i;
 }
 private void put(Item i) {
 if (index + typeCount > threshold) {
-int ll = items.length;
+int ll = items.Length;
 int nl = ll * 2 + 1;
 Item[] newItems = new Item[nl];
 for (int l = ll - 1; l >= 0; --l) {
 Item j = items[l];
 while (j != null){
-int index = j.hashCode % newItems.length;
+int index = j.hashCode % newItems.Length;
 Item k = j.next;
 j.next = newItems[index];
 newItems[index] = j;
@@ -749,7 +749,7 @@ j = k;
 items = newItems;
 threshold = (int)(nl * 0.75);
 }
-int index = i.hashCode % items.length;
+int index = i.hashCode % items.Length;
 i.next = items[index];
 items[index] = i;
 }

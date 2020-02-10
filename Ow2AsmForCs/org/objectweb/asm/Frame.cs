@@ -32,7 +32,7 @@ static Frame(){
 int i;
 int[] b = new int[202];
 String s = "EFFFFFFFFGGFFFGGFFFEEFGFGFEEEEEEEEEEEEEEEEEEEEDEDEDDDDD" + "CDCDEEEEEEEEEEEEEEEEEEEEBABABBBBDCFFFGGGEDCDCDCDCDCDCDCDCD" + "CDCEEEEDDDDDDDCDCDCEFEFDDEEFFDEDEEEBDDBBDDDDDDCCCCCCCCEFED" + "DDCDCDEEEEEEEEEEFEEEEEEDDEEDDEE";
-for (i = 0; i < b.length; ++i) {
+for (i = 0; i < b.Length; ++i) {
 b[i] = s.charAt(i) - 'E';
 }
 SIZE = b;
@@ -47,7 +47,7 @@ private int initializationCount;
 private int[] initializations;
 internal void set(ClassWriter cw, int nLocal, Object[] local, int nStack, Object[] stack) {
 int i = convert(cw, nLocal, local, inputLocals);
-while (i < local.length){
+while (i < local.Length){
 inputLocals[i++] = TOP;
 }
 int nStackTop = 0;
@@ -89,7 +89,7 @@ initializationCount = f.initializationCount;
 initializations = f.initializations;
 }
 private int get(int local) {
-if (outputLocals == null || local >= outputLocals.length) {
+if (outputLocals == null || local >= outputLocals.Length) {
 return LOCAL | local;
 }
 else {
@@ -104,10 +104,10 @@ private void set(int local, int type) {
 if (outputLocals == null) {
 outputLocals = new int[10];
 }
-int n = outputLocals.length;
+int n = outputLocals.Length;
 if (local >= n) {
 int[] t = new int[Math.max(local + 1, 2 * n)];
-System.arraycopy(outputLocals, 0, t, 0, n);
+SystemJ.arraycopy(outputLocals, 0, t, 0, n);
 outputLocals = t;
 }
 outputLocals[local] = type;
@@ -116,10 +116,10 @@ private void push(int type) {
 if (outputStack == null) {
 outputStack = new int[10];
 }
-int n = outputStack.length;
+int n = outputStack.Length;
 if (outputStackTop >= n) {
 int[] t = new int[Math.max(outputStackTop + 1, 2 * n)];
-System.arraycopy(outputStack, 0, t, 0, n);
+SystemJ.arraycopy(outputStack, 0, t, 0, n);
 outputStack = t;
 }
 outputStack[outputStackTop++] = type;
@@ -229,10 +229,10 @@ private void init(int var) {
 if (initializations == null) {
 initializations = new int[2];
 }
-int n = initializations.length;
+int n = initializations.Length;
 if (initializationCount >= n) {
 int[] t = new int[Math.max(initializationCount + 1, 2 * n)];
-System.arraycopy(initializations, 0, t, 0, n);
+SystemJ.arraycopy(initializations, 0, t, 0, n);
 initializations = t;
 }
 initializations[initializationCount++] = var;
@@ -257,7 +257,7 @@ if (kind == LOCAL) {
 u = dim + inputLocals[u & VALUE];
 }
 else if (kind == STACK) {
-u = dim + inputStack[inputStack.length - (u & VALUE)];
+u = dim + inputStack[inputStack.Length - (u & VALUE)];
 }
 if (t == u) {
 return s;
@@ -277,7 +277,7 @@ else {
 inputLocals[i++] = UNINITIALIZED_THIS;
 }
 }
-for (int j = 0; j < args.length; ++j) {
+for (int j = 0; j < args.Length; ++j) {
 int t = type(cw, args[j].getDescriptor());
 inputLocals[i++] = t;
 if (t == LONG || t == DOUBLE) {
@@ -709,14 +709,14 @@ break;
 internal bool merge(ClassWriter cw, Frame frame, int edge) {
 bool changed = false;
 int i, s, dim, kind, t;
-int nLocal = inputLocals.length;
-int nStack = inputStack.length;
+int nLocal = inputLocals.Length;
+int nStack = inputStack.Length;
 if (frame.inputLocals == null) {
 frame.inputLocals = new int[nLocal];
 changed = true;
 }
 for (i = 0; i < nLocal; ++i) {
-if (outputLocals != null && i < outputLocals.length) {
+if (outputLocals != null && i < outputLocals.Length) {
 s = outputLocals[i];
 if (s == 0) {
 t = inputLocals[i];
@@ -760,7 +760,7 @@ changed = true;
 changed |= merge(cw, edge, frame.inputStack, 0);
 return changed;
 }
-int nInputStack = inputStack.length + owner.inputStackTop;
+int nInputStack = inputStack.Length + owner.inputStackTop;
 if (frame.inputStack == null) {
 frame.inputStack = new int[nInputStack + outputStackTop];
 changed = true;

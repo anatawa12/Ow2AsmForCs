@@ -17,6 +17,11 @@ namespace java.lang
             append(input);
         }
 
+        public StringBuilder(int initialSize)
+        {
+            _builder = new System.Text.StringBuilder(initialSize);
+        }
+
         public StringBuilder append(object p0)
         {
             _builder.Append(p0);

@@ -60,9 +60,9 @@ private void addReference(int sourcePosition, int referencePosition) {
 if (srcAndRefPositions == null) {
 srcAndRefPositions = new int[6];
 }
-if (referenceCount >= srcAndRefPositions.length) {
-int[] a = new int[srcAndRefPositions.length + 6];
-System.arraycopy(srcAndRefPositions, 0, a, 0, srcAndRefPositions.length);
+if (referenceCount >= srcAndRefPositions.Length) {
+int[] a = new int[srcAndRefPositions.Length + 6];
+SystemJ.arraycopy(srcAndRefPositions, 0, a, 0, srcAndRefPositions.Length);
 srcAndRefPositions = a;
 }
 srcAndRefPositions[referenceCount++] = sourcePosition;
@@ -115,7 +115,7 @@ internal virtual bool inSameSubroutine(Label block) {
 if ((status & VISITED) == 0 || (block.status & VISITED) == 0) {
 return false;
 }
-for (int i = 0; i < srcAndRefPositions.length; ++i) {
+for (int i = 0; i < srcAndRefPositions.Length; ++i) {
 if ((srcAndRefPositions[i] & block.srcAndRefPositions[i]) != 0) {
 return true;
 }
@@ -169,7 +169,7 @@ e = e.next;
 }
 }
 public virtual String ToString() {
-return "L" + System.identityHashCode(this);
+return "L" + SystemJ.identityHashCode(this);
 }
 }
 }

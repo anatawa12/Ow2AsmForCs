@@ -45,57 +45,57 @@ bv.put12('c', cw.newUTF8(((Type)value).getDescriptor()));
 }
 else if (value is byte[]) {
 byte[] v = (byte[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('B', cw.newInteger(v[i]).index);
 }
 }
 else if (value is bool[]) {
 bool[] v = (bool[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('Z', cw.newInteger(v[i] ? 1 : 0).index);
 }
 }
 else if (value is short[]) {
 short[] v = (short[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('S', cw.newInteger(v[i]).index);
 }
 }
 else if (value is char[]) {
 char[] v = (char[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('C', cw.newInteger(v[i]).index);
 }
 }
 else if (value is int[]) {
 int[] v = (int[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('I', cw.newInteger(v[i]).index);
 }
 }
 else if (value is long[]) {
 long[] v = (long[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('J', cw.newLong(v[i]).index);
 }
 }
 else if (value is float[]) {
 float[] v = (float[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('F', cw.newFloat(v[i]).index);
 }
 }
 else if (value is double[]) {
 double[] v = (double[])value;
-bv.put12('[', v.length);
-for (int i = 0; i < v.length; i++) {
+bv.put12('[', v.Length);
+for (int i = 0; i < v.Length; i++) {
 bv.put12('D', cw.newDouble(v[i]).index);
 }
 }
@@ -165,12 +165,12 @@ aw = aw.prev;
 }
 }
 static internal void put(AnnotationWriter[] panns, int off, ByteVector @out) {
-int size = 1 + 2 * (panns.length - off);
-for (int i = off; i < panns.length; ++i) {
+int size = 1 + 2 * (panns.Length - off);
+for (int i = off; i < panns.Length; ++i) {
 size += panns[i] == null ? 0 : panns[i].getSize();
 }
-@out.putInt(size).putByte(panns.length - off);
-for (int i = off; i < panns.length; ++i) {
+@out.putInt(size).putByte(panns.Length - off);
+for (int i = off; i < panns.Length; ++i) {
 AnnotationWriter aw = panns[i];
 AnnotationWriter last = null;
 int n = 0;
