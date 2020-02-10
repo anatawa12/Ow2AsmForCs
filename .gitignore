@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/rider,macos,windows,dotnetcore,intellij+iml,visualstudio
-# Edit at https://www.gitignore.io/?templates=rider,macos,windows,dotnetcore,intellij+iml,visualstudio
+# Created by https://www.gitignore.io/api/rider,macos,windows,dotnetcore,intellij+iml,visualstudio,gradle
+# Edit at https://www.gitignore.io/?templates=rider,macos,windows,dotnetcore,intellij+iml,visualstudio,gradle
 
 ### DotnetCore ###
 # .NET Core build folders
@@ -185,6 +185,25 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+### Gradle ###
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -536,4 +555,4 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/rider,macos,windows,dotnetcore,intellij+iml,visualstudio
+# End of https://www.gitignore.io/api/rider,macos,windows,dotnetcore,intellij+iml,visualstudio,gradle
