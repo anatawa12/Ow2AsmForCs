@@ -1,0 +1,543 @@
+<root>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.NodeList, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.NodeList, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.AnnotationDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.AnnotationDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.AnnotationMemberDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.AnnotationMemberDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayAccessExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayAccessExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayCreationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayCreationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.ArrayCreationLevel, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.ArrayCreationLevel, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayInitializerExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ArrayInitializerExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.ArrayType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.ArrayType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.AssertStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.AssertStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.AssignExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.AssignExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.BinaryExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.BinaryExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.BlockComment, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.BlockComment, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.BlockStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.BlockStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.BooleanLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.BooleanLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.BreakStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.BreakStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.CastExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.CastExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.CatchClause, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.CatchClause, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.CharLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.CharLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ClassExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ClassExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.ClassOrInterfaceType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.ClassOrInterfaceType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.CompilationUnit, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.CompilationUnit, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ConditionalExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ConditionalExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.ConstructorDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.ConstructorDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ContinueStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ContinueStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.DoStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.DoStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.DoubleLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.DoubleLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.EmptyStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.EmptyStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.EnclosedExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.EnclosedExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.EnumConstantDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.EnumConstantDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.EnumDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.EnumDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ExplicitConstructorInvocationStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ExplicitConstructorInvocationStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ExpressionStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ExpressionStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.FieldAccessExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.FieldAccessExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.FieldDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.FieldDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ForStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ForStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ForeachStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ForeachStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.IfStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.IfStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.ImportDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.ImportDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.InitializerDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.InitializerDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.InstanceOfExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.InstanceOfExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.IntegerLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.IntegerLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.IntersectionType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.IntersectionType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.JavadocComment, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.JavadocComment, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.LabeledStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.LabeledStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.LambdaExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.LambdaExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.LineComment, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.comments.LineComment, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.LocalClassDeclarationStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.LocalClassDeclarationStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.LongLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.LongLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MarkerAnnotationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MarkerAnnotationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MemberValuePair, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MemberValuePair, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MethodCallExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MethodCallExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.MethodDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.MethodDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MethodReferenceExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.MethodReferenceExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NameExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NameExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.Name, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.Name, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NormalAnnotationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NormalAnnotationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NullLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.NullLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ObjectCreationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ObjectCreationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.PackageDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.PackageDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.Parameter, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.Parameter, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.PrimitiveType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.PrimitiveType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ReturnStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ReturnStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SimpleName, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SimpleName, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SingleMemberAnnotationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SingleMemberAnnotationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.StringLiteralExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.StringLiteralExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SuperExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.SuperExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SwitchEntryStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SwitchEntryStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SwitchStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SwitchStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SynchronizedStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.SynchronizedStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ThisExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.ThisExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ThrowStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.ThrowStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.TryStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.TryStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.TypeExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.TypeExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.TypeParameter, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.TypeParameter, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.UnaryExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.UnaryExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.UnionType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.UnionType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.UnknownType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.UnknownType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.VariableDeclarationExpr, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.expr.VariableDeclarationExpr, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.VariableDeclarator, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.body.VariableDeclarator, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.VoidType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.VoidType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.WhileStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.WhileStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.WildcardType, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.type.WildcardType, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleDeclaration, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleDeclaration, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleRequiresStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleRequiresStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleExportsStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleExportsStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleProvidesStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleProvidesStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleUsesStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleUsesStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleOpensStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.modules.ModuleOpensStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.UnparsableStmt, A) 0'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    <item name='com.github.javaparser.ast.visitor.VoidVisitor void visit(com.github.javaparser.ast.stmt.UnparsableStmt, A) 1'>
+        <annotation name='org.jetbrains.annotations.NotNull'/>
+    </item>
+    
+</root>
