@@ -27,5 +27,11 @@ namespace java.lang
             _builder.Append(p0);
             return this;
         }
+
+        public StringBuilder append(char[] buf, int off, int len)
+        {
+            _builder.Append(buf, off, len);
+            return this;
+        }
     }
 }
