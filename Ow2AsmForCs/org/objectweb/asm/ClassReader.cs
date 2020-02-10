@@ -200,9 +200,6 @@ classWriter.bootstrapMethods = bootstrapMethods;
 public ClassReader(InputStream @is): this(readClass(@is, false)) {
 }
 
-public ClassReader(String name): this(readClass(ClassLoader.getSystemResourceAsStream(name.replace('.', '/') + ".class"), true)) {
-}
-
 private static byte[] readClass(InputStream @is, bool close) {
 if (@is == null) {
 throw new IOException("Class not found");
