@@ -161,7 +161,7 @@ return null;
 }
 ByteVector bv = new ByteVector();
 if ("Ljava/lang/Synthetic;".equals(desc)) {
-synthetics = Math.max(synthetics, parameter + 1);
+synthetics = Math.Max(synthetics, parameter + 1);
 return new AnnotationWriter(cw, false, bv, null, 0);
 }
 bv.putShort(cw.newUTF8(desc)).putShort(0);
@@ -305,8 +305,8 @@ break;
 previousFrameOffset = code.length;
 ++frameCount;
 }
-maxStack = Math.max(maxStack, nStack);
-maxLocals = Math.max(maxLocals, currentLocals);
+maxStack = Math.Max(maxStack, nStack);
+maxLocals = Math.Max(maxLocals, currentLocals);
 }
 public virtual void visitInsn(int opcode) {
 lastCodeOffset = code.length;
@@ -911,7 +911,7 @@ Label k = l.successor;
 int start = l.position;
 int end = (k == null ? code.length : k.position) - 1;
 if (end >= start) {
-max = Math.max(max, 1);
+max = Math.Max(max, 1);
 for (int i = start; i < end; ++i) {
 code.data[i] = Opcodes.NOP;
 }
@@ -1008,7 +1008,7 @@ stack = l;
 b = b.next;
 }
 }
-this.maxStack = Math.max(maxStack, max);
+this.maxStack = Math.Max(maxStack, max);
 }
 else {
 this.maxStack = maxStack;

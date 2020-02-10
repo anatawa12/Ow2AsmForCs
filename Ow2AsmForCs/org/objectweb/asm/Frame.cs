@@ -106,7 +106,7 @@ outputLocals = new int[10];
 }
 int n = outputLocals.Length;
 if (local >= n) {
-int[] t = new int[Math.max(local + 1, 2 * n)];
+int[] t = new int[Math.Max(local + 1, 2 * n)];
 SystemJ.arraycopy(outputLocals, 0, t, 0, n);
 outputLocals = t;
 }
@@ -118,7 +118,7 @@ outputStack = new int[10];
 }
 int n = outputStack.Length;
 if (outputStackTop >= n) {
-int[] t = new int[Math.max(outputStackTop + 1, 2 * n)];
+int[] t = new int[Math.Max(outputStackTop + 1, 2 * n)];
 SystemJ.arraycopy(outputStack, 0, t, 0, n);
 outputStack = t;
 }
@@ -231,7 +231,7 @@ initializations = new int[2];
 }
 int n = initializations.Length;
 if (initializationCount >= n) {
-int[] t = new int[Math.max(initializationCount + 1, 2 * n)];
+int[] t = new int[Math.Max(initializationCount + 1, 2 * n)];
 SystemJ.arraycopy(initializations, 0, t, 0, n);
 initializations = t;
 }
@@ -829,7 +829,7 @@ v = vdim | OBJECT | cw.addType("java/lang/Object");
 else if ((t & BASE_KIND) == OBJECT || (t & DIM) != 0) {
 int tdim = (((t & DIM) == 0 || (t & BASE_KIND) == OBJECT) ? 0 : ELEMENT_OF) + (t & DIM);
 int udim = (((u & DIM) == 0 || (u & BASE_KIND) == OBJECT) ? 0 : ELEMENT_OF) + (u & DIM);
-v = Math.min(tdim, udim) | OBJECT | cw.addType("java/lang/Object");
+v = Math.Min(tdim, udim) | OBJECT | cw.addType("java/lang/Object");
 }
 else {
 v = TOP;
