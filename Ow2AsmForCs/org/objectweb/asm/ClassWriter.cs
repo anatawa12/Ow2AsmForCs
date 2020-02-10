@@ -529,10 +529,11 @@ int resultPosition = result.intVal;
 for (int p = 0; p < length; p++) {
 if (data[position + p] != data[resultPosition + p]) {
 result = result.next;
-continue /* label: loop */;
+goto loop_continue;
 }
 }
 break;
+loop_continue: ;
 }
 int bootstrapMethodIndex;
 if (result != null) {

@@ -113,7 +113,7 @@ top:
 for (; ; ) {
 switch (c = signature.charAt(pos)) {
 case '>':
-break /* label: top */;
+goto top_break;
 case '*':
 ++pos;
 v.visitTypeArgument();
@@ -127,6 +127,7 @@ pos = parseType(signature, pos, v.visitTypeArgument('='));
 break;
 }
 }
+top_break:;
 }
 }
 }

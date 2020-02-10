@@ -1431,9 +1431,10 @@ while (desc.charAt(i) != ';'){
 locals[local++] = desc.substring(j + 1, i++);
 break;
 default:
-break /* label: loop */;
+goto loop_break;
 }
 }
+loop_break:
 frame.localCount = local;
 }
 private int readFrame(int stackMap, bool zip, bool unzip, Context frame) {

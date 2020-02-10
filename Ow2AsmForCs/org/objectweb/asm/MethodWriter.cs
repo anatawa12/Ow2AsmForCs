@@ -1134,9 +1134,10 @@ while (descriptor.charAt(i) != ';'){
 frame[frameIndex++] = Frame.OBJECT | cw.addType(descriptor.substring(j + 1, i++));
 break;
 default:
-break /* label: loop */;
+goto loop_break;
 }
 }
+loop_break:
 frame[1] = frameIndex - 3;
 endFrame();
 }
