@@ -58,6 +58,7 @@ this.strVal3 = strVal3;
 switch (type) {
 case ClassWriter.CLASS:
 this.intVal = 0;
+goto case ClassWriter.UTF8;
 case ClassWriter.UTF8:
 case ClassWriter.STR:
 case ClassWriter.MTYPE:
