@@ -79,7 +79,7 @@ int reference = srcAndRefPositions[i++];
 int offset;
 if (source >= 0) {
 offset = position - source;
-if (offset < Short.MIN_VALUE || offset > Short.MAX_VALUE) {
+if (offset < short.MinValue || offset > short.MaxValue) {
 int opcode = data[reference - 1] & 0xFF;
 if (opcode <= Opcodes.JSR) {
 data[reference - 1] = (byte)(opcode + 49);

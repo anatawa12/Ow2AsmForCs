@@ -384,36 +384,36 @@ return toByteArray();
 return @out.data;
 }
 internal virtual Item newConstItem(Object cst) {
-if (cst is Integer) {
-int val = ((Integer)cst).intValue();
+if (cst is int) {
+int val = (int)cst;
 return newInteger(val);
 }
-else if (cst is Byte) {
-int val = ((Byte)cst).intValue();
+else if (cst is byte) {
+int val = (byte)cst;
 return newInteger(val);
 }
-else if (cst is Character) {
-int val = ((Character)cst).charValue();
+else if (cst is char) {
+int val = (char)cst;
 return newInteger(val);
 }
-else if (cst is Short) {
-int val = ((Short)cst).intValue();
+else if (cst is short) {
+int val = (short)cst;
 return newInteger(val);
 }
-else if (cst is Boolean) {
-int val = ((Boolean)cst).booleanValue() ? 1 : 0;
+else if (cst is bool) {
+int val = (bool)cst ? 1 : 0;
 return newInteger(val);
 }
-else if (cst is Float) {
-float val = ((Float)cst).floatValue();
+else if (cst is float) {
+float val = (float)cst;
 return newFloat(val);
 }
-else if (cst is Long) {
-long val = ((Long)cst).longValue();
+else if (cst is long) {
+long val = (long)cst;
 return newLong(val);
 }
-else if (cst is Double) {
-double val = ((Double)cst).doubleValue();
+else if (cst is double) {
+double val = (double)cst;
 return newDouble(val);
 }
 else if (cst is String) {

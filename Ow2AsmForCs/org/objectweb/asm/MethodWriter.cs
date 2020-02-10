@@ -543,7 +543,7 @@ addSuccessor(stackSize, label);
 }
 }
 }
-if ((label.status & Label.RESOLVED) != 0 && label.position - code.length < Short.MIN_VALUE) {
+if ((label.status & Label.RESOLVED) != 0 && label.position - code.length < short.MinValue) {
 if (opcode == Opcodes.GOTO) {
 code.putByte(200);
 }

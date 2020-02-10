@@ -111,7 +111,7 @@ case ClassWriter.INT:
 item.set(readInt(index));
 break;
 case ClassWriter.FLOAT:
-item.set(Float.intBitsToFloat(readInt(index)));
+item.set(BitConverter.Int32BitsToSingle(readInt(index)));
 break;
 case ClassWriter.NAME_TYPE:
 item.set(tag, readUTF8(index, buf), readUTF8(index + 2, buf), null);
@@ -121,7 +121,7 @@ item.set(readLong(index));
 ++i;
 break;
 case ClassWriter.DOUBLE:
-item.set(Double.longBitsToDouble(readLong(index)));
+item.set(BitConverter.Int64BitsToDouble(readLong(index)));
 ++i;
 break;
 case ClassWriter.UTF8:
@@ -1269,7 +1269,7 @@ av.visit(name, (byte)readInt(items[readUnsignedShort(v)]));
 v += 2;
 break;
 case 'Z':
-av.visit(name, readInt(items[readUnsignedShort(v)]) == 0 ? Boolean.FALSE : Boolean.TRUE);
+av.visit(name, readInt(items[readUnsignedShort(v)]) != 0);
 v += 2;
 break;
 case 'S':
@@ -1359,7 +1359,7 @@ break;
 case 'F':
 float[] fv = new float[size];
 for (i = 0; i < size; i++) {
-fv[i] = Float.intBitsToFloat(readInt(items[readUnsignedShort(v)]));
+fv[i] = BitConverter.Int32BitsToSingle(readInt(items[readUnsignedShort(v)]));
 v += 3;
 }
 av.visit(name, fv);
@@ -1368,7 +1368,7 @@ break;
 case 'D':
 double[] dv = new double[size];
 for (i = 0; i < size; i++) {
-dv[i] = Double.longBitsToDouble(readLong(items[readUnsignedShort(v)]));
+dv[i] = BitConverter.Int64BitsToDouble(readLong(items[readUnsignedShort(v)]));
 v += 3;
 }
 av.visit(name, dv);
@@ -1661,11 +1661,11 @@ switch (b[index - 1]) {
 case ClassWriter.INT:
 return readInt(index);
 case ClassWriter.FLOAT:
-return Float.intBitsToFloat(readInt(index));
+return BitConverter.Int32BitsToSingle(readInt(index));
 case ClassWriter.LONG:
 return readLong(index);
 case ClassWriter.DOUBLE:
-return Double.longBitsToDouble(readLong(index));
+return BitConverter.Int64BitsToDouble(readLong(index));
 case ClassWriter.CLASS:
 return Type.getObjectType(readUTF8(index, buf));
 case ClassWriter.STR:

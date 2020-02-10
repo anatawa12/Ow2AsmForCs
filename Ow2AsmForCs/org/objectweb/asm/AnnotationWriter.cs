@@ -27,18 +27,18 @@ bv.putShort(cw.newUTF8(name));
 if (value is String) {
 bv.put12('s', cw.newUTF8((String)value));
 }
-else if (value is Byte) {
-bv.put12('B', cw.newInteger(((Byte)value).byteValue()).index);
+else if (value is byte) {
+bv.put12('B', cw.newInteger((byte)value).index);
 }
-else if (value is Boolean) {
-int v = ((Boolean)value).booleanValue() ? 1 : 0;
+else if (value is bool) {
+int v = (bool)value ? 1 : 0;
 bv.put12('Z', cw.newInteger(v).index);
 }
-else if (value is Character) {
-bv.put12('C', cw.newInteger(((Character)value).charValue()).index);
+else if (value is char) {
+bv.put12('C', cw.newInteger((char)value).index);
 }
-else if (value is Short) {
-bv.put12('S', cw.newInteger(((Short)value).shortValue()).index);
+else if (value is short) {
+bv.put12('S', cw.newInteger((short)value).index);
 }
 else if (value is Type) {
 bv.put12('c', cw.newUTF8(((Type)value).getDescriptor()));

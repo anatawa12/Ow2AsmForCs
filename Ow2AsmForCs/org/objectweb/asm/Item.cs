@@ -42,12 +42,12 @@ this.hashCode = 0x7FFFFFFF & (type + (int)longVal);
 }
 internal void set(float floatVal) {
 this.type = ClassWriter.FLOAT;
-this.intVal = Float.floatToRawIntBits(floatVal);
+this.intVal = BitConverter.SingleToInt32Bits(floatVal);
 this.hashCode = 0x7FFFFFFF & (type + (int)floatVal);
 }
 internal void set(double doubleVal) {
 this.type = ClassWriter.DOUBLE;
-this.longVal = Double.doubleToRawLongBits(doubleVal);
+this.longVal = BitConverter.DoubleToInt64Bits(doubleVal);
 this.hashCode = 0x7FFFFFFF & (type + (int)doubleVal);
 }
 internal void set(int type, String strVal1, String strVal2, String strVal3) {
