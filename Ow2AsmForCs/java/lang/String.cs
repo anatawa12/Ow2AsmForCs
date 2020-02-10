@@ -10,5 +10,6 @@ namespace java.lang
         public static int indexOf(this string _string, char search, int startIndex = 0) => _string.IndexOf(search);
         public static string substring(this string _string, int begin) => _string.Substring(begin);
         public static string substring(this string _string, int begin, int end) => _string.Substring(begin, begin + end);
+        public static string replace(this string _string, char from, char to) => _string.Replace(from, to);
     }
 }
