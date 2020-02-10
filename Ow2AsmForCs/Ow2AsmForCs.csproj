@@ -2,7 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <NoWarn>8632</NoWarn>
+        <!--
+        CS0162: Unreachable code detected
+        CS0164: This label has not been referenced
+        CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
+        -->
+        <NoWarn>8632;0162;0164</NoWarn>
     </PropertyGroup>
 
 </Project>
