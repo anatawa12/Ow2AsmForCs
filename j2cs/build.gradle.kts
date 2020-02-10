@@ -37,7 +37,7 @@ tasks {
     }
 
     register("generateCs", JavaExec::class.java) {
-        classpath = configurations.runtimeClasspath.get()
+        classpath = sourceSets.main.get().runtimeClasspath
         main = "com.anatawa12.j2cs.MainKt"
         args = listOf(javaAsmSrcRoot.toString(), csAsmSrcRoot.toString()) + exclusions
     }
