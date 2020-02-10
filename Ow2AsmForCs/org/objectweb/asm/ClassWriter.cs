@@ -293,7 +293,7 @@ size += attrs.getSize(this, null, 0, -1, -1);
 }
 size += pool.length;
 ByteVector @out = new ByteVector(size);
-@out.putInt(0xCAFEBABE).putInt(version);
+@out.putInt(unchecked((int)0xCAFEBABE)).putInt(version);
 @out.putShort(index).putByteArray(pool.data, 0, pool.length);
 int mask = Opcodes.ACC_DEPRECATED | ACC_SYNTHETIC_ATTRIBUTE | ((access & ACC_SYNTHETIC_ATTRIBUTE) / TO_ACC_SYNTHETIC);
 @out.putShort(access & ~mask).putShort(name).putShort(superName);
