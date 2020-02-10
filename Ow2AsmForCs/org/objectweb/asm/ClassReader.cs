@@ -197,45 +197,6 @@ bootstrapMethods.putByteArray(b, u + 10, attrSize - 2);
 classWriter.bootstrapMethodsCount = boostrapMethodCount;
 classWriter.bootstrapMethods = bootstrapMethods;
 }
-public ClassReader(InputStream @is): this(readClass(@is, false)) {
-}
-
-private static byte[] readClass(InputStream @is, bool close) {
-if (@is == null) {
-throw new IOException("Class not found");
-}
-try {
-byte[] b = new byte[@is.available()];
-int len = 0;
-while (true){
-int n = @is.read(b, len, b.Length - len);
-if (n == -1) {
-if (len < b.Length) {
-byte[] c = new byte[len];
-SystemJ.arraycopy(b, 0, c, 0, len);
-b = c;
-}
-return b;
-}
-len += n;
-if (len == b.Length) {
-int last = @is.read();
-if (last < 0) {
-return b;
-}
-byte[] c = new byte[b.Length + 1000];
-SystemJ.arraycopy(b, 0, c, 0, len);
-c[len++] = (byte)last;
-b = c;
-}
-}
-}
-finally {
-if (close) {
-@is.close();
-}
-}
-}
 public virtual void accept(ClassVisitor classVisitor, int flags) {
 accept(classVisitor, new Attribute[0], flags);
 }
