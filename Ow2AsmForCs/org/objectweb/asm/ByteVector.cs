@@ -24,7 +24,7 @@ return this;
 }
 internal virtual ByteVector put11(int b1, int b2) {
 int length = this.length;
-if (length + 2 > data.Length) {
+if (length + 2 > this.data.Length) {
 enlarge(2);
 }
 byte[] data = this.data;
@@ -35,7 +35,7 @@ return this;
 }
 public virtual ByteVector putShort(int s) {
 int length = this.length;
-if (length + 2 > data.Length) {
+if (length + 2 > this.data.Length) {
 enlarge(2);
 }
 byte[] data = this.data;
@@ -46,7 +46,7 @@ return this;
 }
 internal virtual ByteVector put12(int b, int s) {
 int length = this.length;
-if (length + 3 > data.Length) {
+if (length + 3 > this.data.Length) {
 enlarge(3);
 }
 byte[] data = this.data;
@@ -58,7 +58,7 @@ return this;
 }
 public virtual ByteVector putInt(int i) {
 int length = this.length;
-if (length + 4 > data.Length) {
+if (length + 4 > this.data.Length) {
 enlarge(4);
 }
 byte[] data = this.data;
@@ -71,7 +71,7 @@ return this;
 }
 public virtual ByteVector putLong(long l) {
 int length = this.length;
-if (length + 8 > data.Length) {
+if (length + 8 > this.data.Length) {
 enlarge(8);
 }
 byte[] data = this.data;
@@ -94,7 +94,7 @@ if (charLength > 65535) {
 throw new IllegalArgumentException();
 }
 int len = length;
-if (len + 2 + charLength > data.Length) {
+if (len + 2 + charLength > this.data.Length) {
 enlarge(2 + charLength);
 }
 byte[] data = this.data;

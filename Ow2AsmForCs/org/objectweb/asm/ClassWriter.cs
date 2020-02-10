@@ -732,7 +732,7 @@ i = i.next;
 return i;
 }
 private void put(Item i) {
-if (index + typeCount > threshold) {
+if (this.index + typeCount > threshold) {
 int ll = items.Length;
 int nl = ll * 2 + 1;
 Item[] newItems = new Item[nl];
