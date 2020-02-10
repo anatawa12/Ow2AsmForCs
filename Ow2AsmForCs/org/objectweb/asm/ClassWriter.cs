@@ -686,7 +686,7 @@ return result;
 }
 internal virtual int getMergedType(int type1, int type2) {
 key2.type = TYPE_MERGED;
-key2.longVal = type1 | (((long)type2) << 32);
+key2.longVal = (uint)type1 | (((long)type2) << 32);
 key2.hashCode = 0x7FFFFFFF & (TYPE_MERGED + type1 + type2);
 Item result = get(key2);
 if (result == null) {
