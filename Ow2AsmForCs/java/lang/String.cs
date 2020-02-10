@@ -7,5 +7,6 @@ namespace java.lang
         public static int length(this string _string) => _string.Length;
         public static char[] toCharArray(this string _string) => _string.ToCharArray();
         public static char charAt(this string _string, int index) => _string[index];
+        public static int indexOf(this string _string, char search, int startIndex = 0) => _string.IndexOf(search);
     }
 }
