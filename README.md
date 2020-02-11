@@ -5,4 +5,4 @@ a very small and fast Java bytecode manipulation framework converted to C# for .
 ## License
 
 3-clause BSD License. 
-You may obtain a copy of the License at /java/LICENSE.txt or [LICEMSE.txt](./LICEMSE.txt)
+You may obtain a copy of the License at /java/LICENSE.txt or [LICENSE.txt](./LICENSE.txt)
