@@ -8,6 +8,12 @@
         CS8632: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context.
         -->
         <NoWarn>8632;0162;0164</NoWarn>
+        <PackageVersion>5.2.0.0</PackageVersion>
+        <Description>a very small and fast Java bytecode manipulation framework converted to C# for .Net runtime</Description>
+        <PackageProjectUrl>https://github.com/anatawa12/Ow2AsmForCs</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/anatawa12/Ow2AsmForCs.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
     </PropertyGroup>
 
 </Project>
